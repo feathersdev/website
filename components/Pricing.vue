@@ -61,7 +61,8 @@ const formattedTokensPerMonth = computed(() => {
 
 <template>
   <div class="flex flex-col sm:flex-row w-full my-12">
-    <div class="flex flex-col justify-center items-center py-8 w-full sm:w-1/2 gap-5 border border-none border-b-none sm:border-solid border-white relative sm:-right-4 rounded-xl sm:rounded-r-none bg-base-100 sm:border-r-none">
+    <div
+      class="flex flex-col justify-center items-center py-8 w-full sm:w-1/2 gap-5 border border-none border-b-none sm:border-solid border-white relative sm:-right-4 rounded-xl sm:rounded-r-none bg-base-100 sm:border-r-none">
       <label class="text-3xl font-semibold">Free Plan</label>
       <div class="flex flex-col text-center">
         <span class="text-xl font-semibold">Unlimited</span>
@@ -75,15 +76,12 @@ const formattedTokensPerMonth = computed(() => {
         <span class="text-xl font-semibold">$0</span>
         <span class="text-sm">per month</span>
       </div>
-      <CTAButton
-        secondary
-        class="text-white! mb-8 sm:mb-0"
-        href="https://app.feathers.cloud/"
-      >
+      <CTAButton secondary class="text-white! mb-8 sm:mb-0" href="https://app.feathers.dev/">
         Sign Up
       </CTAButton>
     </div>
-    <div class="flex flex-col justify-center items-center py-8 w-full sm:w-1/2 gap-5 border border-solid border-primary rounded-xl relative -top-4 sm:top-0 sm:-left-4 -my-3 bg-base-100">
+    <div
+      class="flex flex-col justify-center items-center py-8 w-full sm:w-1/2 gap-5 border border-solid border-primary rounded-xl relative -top-4 sm:top-0 sm:-left-4 -my-3 bg-base-100">
       <label class="text-3xl font-semibold">Paid Plan</label>
       <div class="flex flex-col text-center">
         <span class="text-xl font-semibold">Unlimited</span>
@@ -97,17 +95,14 @@ const formattedTokensPerMonth = computed(() => {
         <span class="text-xl font-semibold">$10 per 10,000</span>
         <span class="text-sm">tokens/mo.</span>
       </div>
-      <CTAButton
-        primary
-        class="text-white! mb-8 sm:mb-0"
-        href="https://app.feathers.cloud/"
-      >
+      <CTAButton primary class="text-white! mb-8 sm:mb-0" href="https://app.feathers.dev/">
         Sign Up
       </CTAButton>
     </div>
   </div>
 
-  <div class="p-8 sm:p-12 rounded-xl border border-solid border-white flex flex-col gap-10 sm:mx-4 bg-gradient-to-t from-base-100 to-base-200">
+  <div
+    class="p-8 sm:p-12 rounded-xl border border-solid border-white flex flex-col gap-10 sm:mx-4 bg-gradient-to-t from-base-100 to-base-200">
     <div class="flex flex-col gap-2">
       <h2 class="text-4xl! !m-0 !p-0 border-none!">
         Pricing Calculator
@@ -121,15 +116,19 @@ const formattedTokensPerMonth = computed(() => {
     <div class="flex flex-col rounded-xl border border-solid border-white/10 p-4 gap-1">
       <div class="flex flex-col md:flex-row items-center gap-2">
         <label class="text-lg font-semibold">Number of Users</label>
-        <span class="text-lg font-semibold text-right border border-solid border-white/30 px-4 rounded-lg">{{ userCount }}</span>
+        <span class="text-lg font-semibold text-right border border-solid border-white/30 px-4 rounded-lg">{{ userCount
+          }}</span>
       </div>
-      <input v-model="currentStep" type="range" min="0" :max="Object.keys(userCountSteps).length - 1" step="1" class="flex-grow">
+      <input v-model="currentStep" type="range" min="0" :max="Object.keys(userCountSteps).length - 1" step="1"
+        class="flex-grow">
     </div>
 
     <div class="flex flex-col rounded-xl border border-solid border-white/10 p-4 gap-1">
       <div class="flex flex-col items-center sm:flex-row gap-2">
         <label class="text-lg font-semibold">Users visit once every</label>
-        <span class="text-lg font-semibold text-right border border-solid border-white/30 px-4 rounded-lg flex items-center">{{ loginsPerMonth.name }}</span>
+        <span
+          class="text-lg font-semibold text-right border border-solid border-white/30 px-4 rounded-lg flex items-center">{{
+            loginsPerMonth.name }}</span>
       </div>
       <input v-model="currentLoginsPerMonth" type="range" min="0" max="3" step="1" class="flex-grow">
     </div>
@@ -162,16 +161,12 @@ const formattedTokensPerMonth = computed(() => {
 
       <transition>
         <div v-if="price >= MAX_PRICE" class="!text-[var(--s)]">
-          <a href="mailto:hello@feathers.cloud">Contact Us</a>&nbsp;
+          <a href="mailto:hello@feathers.dev">Contact Us</a>&nbsp;
           <span>for Volume Discounts and Self-hosted options</span>
         </div>
       </transition>
 
-      <CTAButton
-        primary
-        class="text-white!"
-        href="https://app.feathers.cloud/"
-      >
+      <CTAButton primary class="text-white!" href="https://app.feathers.dev/">
         Get started for free
       </CTAButton>
     </div>

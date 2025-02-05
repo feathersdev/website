@@ -32,8 +32,6 @@ declare module 'vue' {
     LanguageSelect: typeof import('./components/LanguageSelect.vue')['default']
     ListItem: typeof import('./components/ListItem.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     Select: typeof import('./components/Select.vue')['default']
     Tab: typeof import('./components/Tab.vue')['default']
     Tabs: typeof import('./components/Tabs.vue')['default']

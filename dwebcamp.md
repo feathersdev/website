@@ -1,14 +1,10 @@
-<script setup lang="ts">
-import CTAButton from './components/CTAButton.vue'
-</script>
-
 # Hello DWeb Camper!
 
 Thank you for visiting! At Feathers Cloud we are working on the tools to bring local-first protocols, technologies and concepts into modern web development.
 
 ## Join the DWeb Chat
 
-The DWeb chat at [dwebchat.feathers.cloud](https://dwebchat.feathers.cloud) is a **local-first chat** application that uses [Feathers Cloud Auth](./auth/index.md) for user logins and [Automerge](https://automerge.org) for synchronizing data. It combines local-first tech with with a familiar modern-web user experience, like
+The DWeb chat at [dwebchat.feathers.dev](https://dwebchat.feathers.dev) is a **local-first chat** application that uses [Feathers Cloud Auth](./auth/index.md) for user logins and [Automerge](https://automerge.org) for synchronizing data. It combines local-first tech with with a familiar modern-web user experience, like
 
 - Secure user logins
 - Works offline
@@ -18,14 +14,7 @@ The DWeb chat at [dwebchat.feathers.cloud](https://dwebchat.feathers.cloud) is a
 - Users own their data and (device) identity
 - It is only ~250 lines of React or Svelte code (including HTML)
 
-<CTAButton
-  primary
-  class="text-white! mt-6 "
-  href="https://dwebchat.feathers.cloud"
-  target="_blank"
->
-  Join the DWeb Chat
-</CTAButton>
+[Join the DWeb Chat](https://dwebchat.feathers.dev)
 
 ## About Feathers Cloud
 
@@ -39,13 +28,13 @@ Developers are dealing with increased complexity when it comes to authentication
 
 ### The Solution: Local-first Applications
 
-We believe that local-first applications can turn this around. We enable devs to create "small apps" that can run in any web browser and grow if necessary instead of huge apps that never scale big. Our [DWeb Chat demo](https://dwebchat.feathers.cloud) shows how decentralized tech can be combined into a modern web application.
+We believe that local-first applications can turn this around. We enable devs to create "small apps" that can run in any web browser and grow if necessary instead of huge apps that never scale big. Our [DWeb Chat demo](https://dwebchat.feathers.dev) shows how decentralized tech can be combined into a modern web application.
 
 ## Create your own chat
 
 You can find the chat code [on GitHub](https://github.com/feathersdev/chat/) and create your own chat in a few steps:
 
-1. To enable user login, sign up for [Feathers Cloud Auth](https://feathers.cloud/auth/) at [app.feathers.cloud](https://app.feathers.cloud) and create a new organization and application with the default settings. Optionally customize your login page theme. 🤩
+1. To enable user login, sign up for [Feathers Cloud Auth](https://feathers.dev/auth/) at [app.feathers.dev](https://app.feathers.dev) and create a new organization and application with the default settings. Optionally customize your login page theme. 🤩
 2. Copy the application id (`did:key:...`) at the top of the application details page.
 3. Run the following in a terminal:
 

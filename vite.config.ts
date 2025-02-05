@@ -156,7 +156,7 @@ export default defineConfig({
     // https://github.com/ATQQ/sugar-blog/tree/master/packages/vitepress-plugin-rss#options
     RssPlugin({
       title: 'The Feathers Cloud Blog',
-      baseUrl: 'https://feathers.cloud',
+      baseUrl: 'https://feathers.dev',
       copyright: 'Copyright (c) 2012-present',
       // don't automatically add the rss icon because the plugin mistakenly adds two in production.
       icon: false,

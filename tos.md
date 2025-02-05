@@ -10,11 +10,12 @@ titleTemplate: Terms Of Service
 TERMS OF SERVICE
 
 # FEATHERS CLOUD INC. WEBSITE TERMS OF USE
+
 **LAST UPDATED: JUNE 12, 2024**
 
 ## 1. OVERVIEW
 
-These Terms of Use form a legally binding contract between FEATHERS CLOUD INC. ("we" or "us") and the people and companies (“Users” or “you”) that access and use our website located at [https://feathers.cloud/](https://feathers.cloud/) or any related website or mobile platform controlled by us (collectively, the "Website"). These Terms of Use apply to all services provided through our Website and any other software application we operate, and all content, services, and products available at or through the Website.
+These Terms of Use form a legally binding contract between FEATHERS CLOUD INC. ("we" or "us") and the people and companies (“Users” or “you”) that access and use our website located at [https://feathers.dev/](https://feathers.dev/) or any related website or mobile platform controlled by us (collectively, the "Website"). These Terms of Use apply to all services provided through our Website and any other software application we operate, and all content, services, and products available at or through the Website.
 
 It is very important that you read and fully understand these Terms of Use before using the Website. By agreeing to these Terms of Use and using the Website, you are entering into a legally binding contract which will impact your rights.
 
@@ -130,7 +131,7 @@ These Terms of Use, in conjunction with all policies and guidelines available on
 
 ## 15. QUESTIONS ON THESE TERMS OF USE
 
-We welcome you to contact us with any questions on these Terms of Use. You can send your questions regarding these Terms of Use to the following email address: hello@feathers.cloud
+We welcome you to contact us with any questions on these Terms of Use. You can send your questions regarding these Terms of Use to the following email address: hello@feathers.dev
 
 ## 16. CONFIRMATION OF AGREEMENT TO TERMS OF USE
 

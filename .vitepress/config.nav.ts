@@ -23,6 +23,6 @@ export default [
   },
   {
     text: 'Login',
-    link: 'https://app.feathers.cloud',
+    link: 'https://app.feathers.dev',
   },
 ]
