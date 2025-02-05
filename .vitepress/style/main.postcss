@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Feathers Cloud DaisyUI Theme */
+:root {
+  --p: #ec5f62;
+  --pf: #ec5f62;
+  --pc: #ffffff;
+  
+  --s: #fed06c;
+  --sf: #553c9a;
+  --sc: #000000;
+  
+  --a: #553c9a;
+  --af: #2d1f51;
+  --ac: #ffffff;
+  
+  --n: #1f2937;
+  --nf: #405a91;
+  --nc: #ffffff;
+  
+  --b1: #05050a;
+  --b2: #1c1835;
+  --b3: #27214a;
+  --bc: #ebecf0;
+  
+  --in: #3082cf;
+  --inc: #e9ecf1;
+  
+  --su: #36d399;
+  --suc: #e9ecf1;
+  
+  --wa: #fbbd23;
+  --wac: #e9ecf1;
+  
+  --er: #f87272;
+  --erc: #e9ecf1;
+  
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  
+  --animation-btn: 0.25s;
+  --animation-input: 0.2s;
+  
+  --btn-text-case: none;
+  --border-btn: 1px;
+  
+  --navbar-padding: 0.5rem;
+  
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  
+  --invert-logo: 0;
+  --vp-code-font-size: 1rem;
+}
+
+:root body {
+  font-family:
+    'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif !important;
+  font-size: 18px;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Home Page Toolbar Overrides */
+.home-page .VPNavBar {
+  border-bottom: none;
+}
+
+.home-page .VPNav {
+  --vp-nav-bg-color: transparent;
+  --vp-c-gutter: transparent;
+}
+
+/* Remove the search button from the home page. Keyboard shortcut still works. */
+.home-page #docsearch {
+  /* display: none; */
+}
+/* Hide the default footer because FeathersLayout.vue uses a custom footer */
+.VPFooter {
+  display: none;
+}
+/* Hide the white gradient at the bottom of the page */
+.aside-curtain {
+  display: none;
+}
+
+.VPNavBarAppearance {
+  display: none !important;
+}
+
+/* TODO: Move to UnoCSS Rules */
+.btn {
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  white-space: nowrap;
+}
+.btn.btn-xl {
+  padding: 0.74rem 2rem;
+}
+.btn:active:hover,
+.btn:active:focus {
+  animation: none;
+}
+.btn:active:hover,
+.btn:active:focus {
+  transform: scale(var(--btn-focus-scale, 0.95));
+}
+
+.btn-primary {
+  background-color: var(--vp-c-brand);
+  transition: all 300ms;
+}
+.btn-primary:hover {
+  background-color: var(--vp-c-brand-darker);
+}
+
+.btn-secondary {
+  background-color: var(--vp-c-brand-2);
+  transition: all 300ms;
+}
+.btn-secondary:hover {
+  background-color: var(--vp-c-brand-2-darker);
+}
+
+@keyframes button-pop {
+  0% {
+    transform: scale(var(--btn-focus-scale, 0.95));
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body .bg-primary {
+  background: var(--primary);
+}
+body .text-primary-content {
+  background: var(--primary-content);
+}
+body .bg-secondary {
+  background: var(--secondary);
+}
+body .text-secondary-content {
+  background: var(--secondary-content);
+}
+/* For secondary colors, switch the cloud color to charcoal in dark mode */
+.dark body .bg-secondary {
+  background: var(--accent);
+}
+.dark body .text-secondary-content {
+  background: var(--accent-content);
+}
+
+body .bg-neutral {
+  background: var(--neutral);
+}
+body .text-neutral-content {
+  color: var(--neutral-content);
+}
+body .bg-base-100 {
+  background: var(--neutral);
+}
+
+.VPNav .logo,
+.VPNav .title {
+  transition: all 300ms;
+}
+
+.VPNav .logo {
+  min-height: 48px;
+  height: 48px;
+  margin-right: 120px;
+}
+.VPNav .title {
+  transition: all 300ms;
+  display: flex;
+  max-width: 160px;
+  overflow: hidden;
+  border-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .VPNav .title {
+    max-width: 250px;
+  }
+}
+
+.VPNav .logo,
+.VPNav .title {
+  font-size: 14px !important;
+}
+.home-page .title,
+.feathers-footer .title {
+  font-size: 48px;
+}
+.home-page .logo,
+.feathers-footer .logo {
+  height: 48px;
+  fill: blue;
+}
+.home-page .logo {
+  filter: invert(1);
+}
+.dark .logo {
+  filter: invert(1);
+}
+
+/* Style the Global Language Select in the left nav */
+#app #GlobalLanguageSelect {
+  /* @apply pt-2 pb-3;
+  border-bottom: 1px solid transparent;
+  border-bottom-color: var(--vp-c-divider-light); */
+}
+
+#VPSidebarNav:not(:first-child) {
+  @apply mt-3;
+  border-top: 1px solid transparent;
+  border-top-color: var(--vp-c-divider-light);
+}
+
+@media (min-width: 960px) {
+  .home-page .VPNav,
+  .home-page .VPNav.no-sidebar {
+    position: static;
+    background: none;
+  }
+  #app.home-page .VPNav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* Overrides */
+
+.VPSocialLink {
+  transform: scale(0.9);
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 6px 10px;
+  border: 1px solid #8882;
+}
+
+/* h3 breaks SEO => replaced with h2 with the same size */
+.home-content h2 {
+  margin-top: 2rem;
+  font-size: 1.35rem;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+img.resizable-img {
+  width: unset;
+  height: unset;
+}
+
+body[data-language='js'] pre.language-selectable[data-language='ts'] {
+  display: none;
+}
+
+body[data-language='ts'] pre.language-selectable[data-language='js'] {
+  display: none;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
