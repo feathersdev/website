@@ -1,6 +1,6 @@
 # Auth Client
 
-The Feathers Cloud Auth client in the `@featherscloud/auth` package is used to manage device and user identities as well as access tokens.
+The Feathers Auth client in the `@featherscloud/auth` package is used to manage device and user identities as well as access tokens.
 
 ## Installation
 

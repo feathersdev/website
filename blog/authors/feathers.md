@@ -1,7 +1,7 @@
 ---
 name: The Feathers Crew
 avatar: https://github.com/feathersdev.png
-github: featherscloud
+github: feathersdev
 ---
 
 ## The Feathers Crew

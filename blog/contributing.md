@@ -2,7 +2,7 @@
 layout: doc
 ---
 
-# Contribute to the Feathers Cloud Blog
+# Contribute to the Feathers Blog
 
 ## Writing Posts
 
@@ -34,12 +34,7 @@ Here's an explanation of each field:
 
 ## Categories
 
-The Feathers Cloud blog uses categories to organize posts. The categories are:
-
-- FeathersJS
-- Feathers Cloud
-- Pinion
-- Wings
+The Feathers blog uses categories to organize posts.
 
 ## Managing Categories
 

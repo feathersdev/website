@@ -1,7 +1,7 @@
 export default {
   '/auth/': [
     {
-      text: 'Feathers Cloud Auth',
+      text: 'Feathers Auth',
       collapsible: false,
       items: [
         {
