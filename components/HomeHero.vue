@@ -21,7 +21,6 @@ onBeforeUnmount(toggleHomeClass)
               Auth for Builders, Not Bureaucrats
             </h1>
             <p class="text-balance text-xl sm:text-2xl">
-              <!-- Feathers Cloud Auth is secure, scalable and developer-friendly. -->
               Developer-friendly email logins for your web applications.
             </p>
             <div class="flex flex-col sm:flex-row justify-start items-start gap-4">
@@ -33,7 +32,7 @@ onBeforeUnmount(toggleHomeClass)
           <div class="flex flex-col items-center justify-center py-14 md:py-0">
             <a href="https://app.feathers.dev" class="flex-1">
               <img src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/970b7815-2177-46a3-f73f-c77788cd4500/public"
-                alt="Feathers Cloud Auth Login Screen" class="w-96 shadow-xl">
+                alt="Feathers Auth Login Screen" class="w-96 shadow-xl">
             </a>
           </div>
         </div>
@@ -215,7 +214,7 @@ onBeforeUnmount(toggleHomeClass)
                 Integrate your app
               </h3>
               <p class="mt-1 mb-6 opacity-80 px-3 sm:px-0">
-                Use the <code class="text-[var(--s)]">integrate</code> command to integrate Feathers Cloud Auth into
+                Use the <code class="text-[var(--s)]">integrate</code> command to integrate Feathers Auth into
                 your existing application.
               </p>
               <div class="border-10 border-solid border-base-200 rounded-xl max-w-screen">
@@ -252,8 +251,7 @@ onBeforeUnmount(toggleHomeClass)
 
           <div class="flex flex-row items-center mt-4 mb-12 gap-6">
             <img src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/71ddf09c-4fad-4f64-edb4-1de12e610c00/publichd"
-              alt="Feathers Cloud Auth Dashboard"
-              class="rounded-xl border-12 border-solid border-white/10 shadow-xl mt-8">
+              alt="Feathers Dashboard" class="rounded-xl border-12 border-solid border-white/10 shadow-xl mt-8">
           </div>
         </div>
       </div>

@@ -2,8 +2,8 @@
 layout: page
 sidebar: false
 
-title: Feathers Cloud
-titleTemplate: Auth for builders
+title: feathers.dev
+titleTemplate: Authentication and open source tools for developers
 ---
 
 <script setup lang="ts">

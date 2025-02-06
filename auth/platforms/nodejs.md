@@ -4,7 +4,7 @@ outline: deep
 
 # NodeJS
 
-Feathers Cloud Auth requests can be verified in [NodeJS](https://nodejs.org/) with any framework.
+Feathers Auth requests can be verified in [NodeJS](https://nodejs.org/) with any framework.
 
 ## HTTP
 

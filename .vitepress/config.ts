@@ -41,7 +41,7 @@ export default defineConfig({
       'meta',
       {
         name: 'author',
-        content: `Feathers Cloud Inc.`,
+        content: `Feathers`,
       },
     ],
     [
@@ -95,8 +95,8 @@ export default defineConfig({
     },
 
     blog: {
-      title: 'Feathers Cloud Blog',
-      description: 'Read about all things Feathers Cloud',
+      title: 'Feathers Blog',
+      description: 'Read about all things Feathers',
       defaultAuthor: 'daffl',
       categoryIcons: {
         article: 'i-[heroicons-outline/book-open]',
