@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@config "~/../tailwind.config.js";
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+
+html, body, #__nuxt {
+  font-family: Poppins, sans-serif;
+  height: 100%;
+  width: 100%;
+}

@@ -12,7 +12,7 @@ Let's see how you can get started with Pinion in 30 seconds.
 
 Add Pinion as a development dependency in your project like this:
 
-```
+```bash
 npm install @featherscloud/pinion --save-dev
 ```
 
