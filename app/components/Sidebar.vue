@@ -16,7 +16,9 @@ const { data: docsSections } = await useAsyncData(
 </script>
 
 <template>
-  <div class="relative pt-4 menu w-80 bg-base-100 text-base-content h-full">
+  <div class="relative pt-16 menu w-80 bg-base-100 text-base-content h-full">
+  <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] blur bg-[length:1000%] bg-center z-0"></div>
+  <div class="relative z-10">
     <Flex justify-end class="absolute right-2 lg:hidden">
       <Button square ghost @click="$emit('close')">
         <Icon name="feather:x" size="24" />
@@ -32,5 +34,6 @@ const { data: docsSections } = await useAsyncData(
       />
     </Flex>
     <!-- <pre class="text-xs">{{ docsSections }}</pre> -->
+    </div>
   </div>
 </template>

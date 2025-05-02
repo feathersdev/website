@@ -3,8 +3,9 @@ const dropdownId = useId()
 </script>
 
 <template>
-  <div>
-    <MenuMain />
+  <div class="relative">
+    <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] blur bg-[length:12000px] bg-top -z-10"></div>
+    <MenuMain class="fixed top-0 z-50" />
 
     <Drawer v-slot="{ toggleDrawer }" name="docs" class="lg:drawer-open">
       <DrawerSide name="docs" class="z-40">
