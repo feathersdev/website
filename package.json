@@ -17,7 +17,7 @@
     "@nuxt/image": "1.10.0",
     "@nuxt/scripts": "0.11.6",
     "@nuxt/test-utils": "3.17.2",
-    "@unhead/vue": "^2.0.3",
+    "@unhead/vue": "^2.0.8",
     "@vueuse/core": "^13.1.0",
     "@vueuse/integrations": "^13.1.0",
     "daisy-ui-kit": "5.0.0-pre.7",
@@ -25,15 +25,15 @@
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "packageManager": "pnpm@10.10.0",
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.4",
-    "daisyui": "^5.0.29",
-    "eslint": "^9.0.0",
+    "@tailwindcss/vite": "^4.1.5",
+    "daisyui": "^5.0.35",
+    "eslint": "^9.25.1",
     "shiki": "^3.3.0",
-    "tailwindcss": "^4.1.4",
+    "tailwindcss": "^4.1.5",
     "zod": "^3.24.3"
   }
 }
