@@ -1,24 +1,5 @@
 <script setup lang="ts">
-const products = [
-  {
-    icon: 'feathersdev:auth',
-    name: 'Feathers Auth',
-    description: 'Lorem Ipsum',
-    to: '/auth',
-  },
-  {
-    icon: 'feathersdev:feathers',
-    name: 'Feathers JS',
-    description: 'Lorem Ipsum',
-    to: '/feathers',
-  },
-  {
-    icon: 'feathersdev:pinion',
-    name: 'Feathers Pinion',
-    description: 'Lorem Ipsum',
-    to: '/pinion',
-  },
-]
+const { data: products } = await useAsyncData(() => queryCollection('products').all())
 
 const $route = useRoute()
 const isProductsDropdownOpen = ref(false)
@@ -46,18 +27,18 @@ watch(
           <DropdownContent class="z-10 bg-base-content text-base-100 rounded-box mt-4 p-3 w-96">
             <List>
               <NuxtLink
-                v-for="product in products" :key="product.name"
+                v-for="product in products" :key="product.title"
                 class="list-row hover:bg-base-300/10"
-                :to="product.to"
+                :to="product.slug"
               >
                 <Flex row items-center class="w-12 flex-shrink-0">
                   <Icon :name="product.icon" size="40" />
                 </Flex>
                 <div>
                   <Text semibold lg>
-                    {{ product.name }}
+                    {{ product.title }}
                   </Text>
-                  <div class="text-xs uppercase font-semibold opacity-60">
+                  <div class="text-sm leading-tight opacity-60">
                     {{ product.description }}
                   </div>
                 </div>
