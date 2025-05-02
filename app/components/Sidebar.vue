@@ -2,9 +2,7 @@
 const $emit = defineEmits(['close'])
 
 const route = useRoute()
-
 const productSlug = computed(() => route.path.split('/')[1])
-
 const { data: docsSections } = await useAsyncData(
   () => productSlug.value,
   () => queryCollectionNavigation(productSlug.value, ['meta']),

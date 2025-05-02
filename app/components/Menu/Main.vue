@@ -29,7 +29,7 @@ watch(
               <NuxtLink
                 v-for="product in products" :key="product.title"
                 class="list-row hover:bg-base-300/10 items-center"
-                :to="product.slug"
+                :to="`/${product.slug}`"
               >
                 <Flex row items-center class="w-12 flex-shrink-0">
                   <Icon :name="product.icon" size="40" />
