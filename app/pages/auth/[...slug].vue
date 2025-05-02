@@ -1,13 +1,14 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const pathWithoutHtml = route.path.replace('.html', '')
+const pathWithoutHtml = computed(() => route.path.replace('.html', ''))
 if (route.path.includes('.html')) {
-  navigateTo(pathWithoutHtml, { redirectCode: 301 })
+  navigateTo(pathWithoutHtml.value, { redirectCode: 301 })
 }
 
-const { data: page } = await useAsyncData(() =>
-  queryCollection('auth').path(route.path).first(),
+const { data: page } = await useAsyncData(
+  () => pathWithoutHtml.value,
+  () => queryCollection('auth').path(route.path).first(),
 )
 
 definePageMeta({
@@ -25,7 +26,3 @@ useSeoMeta({
     <ContentRenderer v-if="page" :value="page" />
   </div>
 </template>
-
-<style>
-
-</style>
