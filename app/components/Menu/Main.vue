@@ -28,7 +28,7 @@ watch(
             <List>
               <NuxtLink
                 v-for="product in products" :key="product.title"
-                class="list-row hover:bg-base-300/10"
+                class="list-row hover:bg-base-300/10 items-center"
                 :to="product.slug"
               >
                 <Flex row items-center class="w-12 flex-shrink-0">
@@ -42,9 +42,7 @@ watch(
                     {{ product.description }}
                   </div>
                 </div>
-                <Button square ghost>
-                  <Icon name="feather:chevron-right" size="24" />
-                </Button>
+                <Icon name="feather:chevron-right" size="24" />
               </NuxtLink>
             </List>
           </DropdownContent>
