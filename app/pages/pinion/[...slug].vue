@@ -22,7 +22,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="page" class="pt-6 px-3 lg:px-6 bg-base-100 prose mx-auto">
-    <ContentRenderer v-if="page" :value="page" />
-  </div>
+  <DocsPage v-if="page" :page="page" />
 </template>
