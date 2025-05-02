@@ -24,9 +24,7 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: {
-            default: 'github-light',
-            dark: 'github-dark',
-            // dark: 'monokai',
+            default: 'andromeeda',
           },
         },
       },
