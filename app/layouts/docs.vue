@@ -4,7 +4,7 @@ const dropdownId = useId()
 
 <template>
   <div class="fixed w-full top-0 z-50">
-    <TopNav class="mx-auto max-w-[1512px] bg-base-100/90" />
+    <TopNav class="mx-auto max-w-[1512px] border-b border-b-base-100/20" />
   </div>
   <div class="relative mx-auto max-w-[1512px] bg-base-300">
     <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] -top-16 opacity-50 bg-[length:12000px] bg-top z-0"></div>

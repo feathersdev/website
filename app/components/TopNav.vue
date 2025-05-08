@@ -18,7 +18,7 @@ watch(
     </NavbarStart>
 
     <NavbarCenter>
-      <Flex row items-center class="gap-6">
+      <Flex row items-center class="gap-6 rounded-box bg-base-100/10 p-3 px-12">
         <Dropdown v-model:open="isProductsDropdownOpen" placement="bottom">
           <DropdownTarget class="flex justify-between cursor-pointer">
             Products
