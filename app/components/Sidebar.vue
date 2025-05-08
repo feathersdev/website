@@ -16,8 +16,8 @@ const { data: docsSections } = await useAsyncData(
 </script>
 
 <template>
-  <div class="relative pt-16 menu w-80 bg-base-100 text-base-content h-full">
-  <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] blur bg-[length:1000%] bg-center z-0"></div>
+  <div class="relative pt-16 menu w-80 bg-base-200 text-base-content h-full">
+  <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] opacity-30 bg-[length:2500px] bg-top z-0 scale-x-[-1]"></div>
   <div class="relative z-10">
     <Flex justify-end class="absolute right-2 lg:hidden">
       <Button square ghost @click="$emit('close')">

@@ -3,9 +3,11 @@ const dropdownId = useId()
 </script>
 
 <template>
-  <div class="relative">
-    <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] blur bg-[length:12000px] bg-top -z-10"></div>
-    <MenuMain class="fixed top-0 z-50" />
+  <div class="fixed w-full top-0 z-50">
+    <TopNav class="mx-auto max-w-[1512px] bg-base-100/90" />
+  </div>
+  <div class="relative mx-auto max-w-[1512px] bg-base-300">
+    <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] -top-16 opacity-50 bg-[length:12000px] bg-top z-0"></div>
 
     <Drawer v-slot="{ toggleDrawer }" name="docs" class="lg:drawer-open">
       <DrawerSide name="docs" class="z-40">

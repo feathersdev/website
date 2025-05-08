@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './node_modules/daisy-ui-kit/app/components/*.{vue,js}',
     './app/components/**/*.{vue,js,jsx,mjs,ts,tsx}',
