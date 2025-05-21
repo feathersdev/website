@@ -17,23 +17,22 @@ const { data: docsSections } = await useAsyncData(
 
 <template>
   <div class="relative pt-16 menu w-80 bg-base-200 text-base-content h-full">
-  <div class="absolute inset-0 bg-[url('/img/home-bg.svg')] opacity-30 bg-[length:2500px] bg-top z-0 scale-x-[-1]"></div>
-  <div class="relative z-10">
-    <Flex justify-end class="absolute right-2 lg:hidden">
-      <Button square ghost @click="$emit('close')">
-        <Icon name="feather:x" size="24" />
-      </Button>
-    </Flex>
+    <div class="relative z-10">
+      <Flex justify-end class="absolute right-2 lg:hidden">
+        <Button square ghost @click="$emit('close')">
+          <Icon name="feather:x" size="24" />
+        </Button>
+      </Flex>
 
-    <Flex col class="pb-12 pl-2 mt-8 lg:mt-0 overflow-y-auto">
-      <SidebarMenuSection
-        v-for="link in docsSections"
-        :key="link.id"
-        :title="link.title"
-        :links="link.children"
-      />
-    </Flex>
-    <!-- <pre class="text-xs">{{ docsSections }}</pre> -->
+      <Flex col class="pb-12 pl-2 mt-8 lg:mt-0 overflow-y-auto">
+        <SidebarMenuSection
+          v-for="link in docsSections"
+          :key="link.id"
+          :title="link.title"
+          :links="link.children"
+        />
+      </Flex>
+      <!-- <pre class="text-xs">{{ docsSections }}</pre> -->
     </div>
   </div>
 </template>

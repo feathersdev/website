@@ -1,8 +1,12 @@
 <template>
-  <main class="bg-[url('/img/home-bg.svg')] bg-no-repeat bg-cover w-full h-full">
-    <div class="text-base-content mx-auto max-w-[100rem] lg:drawer-open pt-6">
-      <TopNav />
-      <slot />
+  <main class="relative w-full min-h-full bg-base-200">
+    <div class="absolute w-full z-50">
+      <TopNav class="max-w-[1396px] mx-auto" />
     </div>
+    <div class="relative z-0">
+      <NuxtPage />
+    </div>
+    <MoonSurface class="w-full" />
+    <FooterMain />
   </main>
 </template>

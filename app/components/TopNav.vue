@@ -12,9 +12,7 @@ watch(
 <template>
   <Navbar>
     <NavbarStart>
-      <NuxtLink to="/">
-        <img src="/img/feathers-dev-white.svg" alt="Feathers.dev" class="h-12">
-      </NuxtLink>
+      <Logo />
     </NavbarStart>
 
     <NavbarCenter>

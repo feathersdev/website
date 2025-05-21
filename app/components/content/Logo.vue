@@ -1,8 +1,7 @@
 <template>
   <div class="">
-    <Text class="font-bold whitespace-nowrap">
-      <span class="text-primary">Daisy</span>UI Kit
-      <span>🌼</span>
-    </Text>
+    <NuxtLink to="/">
+      <img src="/img/feathers-dev-white.svg" alt="Feathers.dev" class="h-12">
+    </NuxtLink>
   </div>
 </template>

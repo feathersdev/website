@@ -5,12 +5,12 @@
 
 @plugin "daisyui/theme" {
   name: "feathers";
-  default: true; 
-  prefersdark: false; 
-  color-scheme: dark; 
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
 
   --color-base-100: oklch(3.6% 0.01 270);    /* #05050a */
-  --color-base-200: oklch(13.1% 0.03 270);   /* #1c1835 */
+  --color-base-200: oklch(15% 19% 307);   /* #1c1835 */
   --color-base-300: oklch(35% 44% 287);   /* #27214a */
   --color-base-300-old: oklch(17.6% 0.04 270);   /* #27214a */
   --color-base-content: oklch(93.3% 0.01 260); /* #ebecf0 */
@@ -32,18 +32,35 @@
   --color-error-content: oklch(94.5% 0.01 230); /* #e9ecf1 */
 
   /* border radius */
-  --radius-box: 1rem;          /* from --rounded-box */
-  --radius-btn: 0.5rem;        /* from --rounded-btn */
-  --radius-badge: 1.9rem;      /* from --rounded-badge */
+  --radius-selector: 1rem;
+  --radius-field: 5rem;
+  --radius-box: 0.5rem;       /* from --rounded-box */
 
-  --animation-btn: 0.25s;      
-  --animation-input: 0.2s;     
-  --btn-text-case: none;       
-  --border-btn: 1px;           
-  --navbar-padding: .5rem;    
-  --tab-border: 1px;           
-  --tab-radius: 0.5rem;        
-  --invert-logo: 0;            
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;      /* from --rounded-btn */
+
+  /* border size */
+  --border: 1px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
+
+  --invert-logo: 0;
+
+  /* old stuff */
+  /* --radius-box: 1rem;           */
+  /* --radius-btn: 999rem;         */
+  /* --radius-badge: 1.9rem; */
+
+  /* --animation-btn: 0.25s;       */
+  /* --animation-input: 0.2s;      */
+  /* --btn-text-case: none;        */
+  /* --border-btn: 1px;            */
+  /* --navbar-padding: .5rem;     */
+  /* --tab-border: 1px;            */
+  /* --tab-radius: 0.5rem;         */
 
   /* --- Unused/legacy variables (no direct DaisyUI mapping) --- */
   /*

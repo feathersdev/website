@@ -34,7 +34,7 @@ defineProps<{
         <Text class="flex-grow">
           {{ link.title }}
         </Text>
-        <Badge v-if="link.meta?.new" sm soft accent class="ml-2">
+        <Badge v-if="link.meta?.new" sm accent class="ml-2">
           new
         </Badge>
       </NuxtLink>
