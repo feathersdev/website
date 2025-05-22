@@ -1,15 +1,15 @@
 <template>
   <div class="pb-32">
     <Flex col class="mx-auto max-w-5xl text-center gap-10 mt-46 relative px-4">
-      <Text size="5xl" bold class="flex flex-col items-center justify-center gap-3">
-        <div class="text-center">
+      <Text size="5xl" class="flex flex-col items-center justify-center gap-3">
+        <Flex row items-center justify-center class="gap-2 md:gap-4 text-3xl">
+          <Text>Identity.</Text>
+          <Text>Data.</Text>
+          <Text class="text-white">Realtime.</Text>
+        </Flex>
+        <div class="text-center font-bold text-6xl">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF25B6] to-[#EA591E]">Beyond The Cloud</span>
         </div>
-        <Flex row items-center justify-center class="gap-2 md:gap-4">
-          <Text size="4xl">Local.</Text>
-          <Text size="4xl">Private.</Text>
-          <Text size="4xl" class="text-white">Fast.</Text>
-        </Flex>
       </Text>
       
       <Text size="lg" class="px-4 md:px-12 lg:px-36">
