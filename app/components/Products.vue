@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { BlogPost } from '../../content.config'
+import type { Product } from '~~/content.config';
 
 defineProps<{
-  title: string,
-  description?: string,
   superTitle?: string,
+  title: string,
   subTitle?: string,
-  posts: BlogPost[]
+  description?: string,
+  products: Product[]
 }>()
 </script>
 
@@ -18,11 +18,11 @@ defineProps<{
       :subTitle="subTitle"
       :description="description"
     />
-    <Flex class="mt-4 flex-wrap">
-      <BlogPostTile 
-        v-for="post in posts" 
-        :key="post.id"
-        :post="post"
+    <Flex class="mt-8 flex-wrap">
+      <ProductCard 
+        v-for="product in products" 
+        :key="product.slug"
+        :product="product"
         class="w-full md:w-1/2 lg:w-1/3"
       />
     </Flex>

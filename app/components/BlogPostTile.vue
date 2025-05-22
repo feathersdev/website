@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div>
-    <Card class="h-full border-base-100" >
+    <Card class="h-full">
       <CardBody class="gap-6">
         <figure class="aspect-video rounded-box">
           <img :src="post.meta.imgSrc" :alt="post.title" class="object-cover h-full w-full object-center">

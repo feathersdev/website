@@ -1,4 +1,8 @@
 title: Feathers JS
+shortName: Feathers
 description: The API and real-time application framework
+longDescription: Feathers is a full-stack framework for building real-time applications. It provides a set of tools and libraries for building APIs, real-time applications, and microservices.
 slug: feathers
 icon: 'feathersdev:feathers'
+logo: '/img/logo-feathers-white.svg'
+link: 'https://feathersjs.com'

@@ -1,4 +1,8 @@
 title: Feathers Pinion
+shortName: Pinion
 description: A flexible code generator and task runner
+longDescription: Pinion is a flexible task runner and code generator for any language. Using TypeScript, it gives you full flexibility over what you can do with type-safe tasks and templates out of the box.
 slug: pinion
 icon: 'feathersdev:pinion'
+logo: '/img/logo-pinion-white.svg'
+link: '/pinion'

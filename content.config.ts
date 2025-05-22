@@ -3,9 +3,13 @@ import { z } from 'zod'
 
 const productSchema = z.object({
   title: z.string(),
+  shortName: z.string(),
   description: z.string(),
+  longDescription: z.string(),
   slug: z.string(),
   icon: z.string(),
+  logo: z.string(),
+  link: z.string(),
 })
 
 export type Product = z.infer<typeof productSchema>
