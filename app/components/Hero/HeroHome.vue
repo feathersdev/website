@@ -5,7 +5,7 @@
         <Flex row items-center justify-center class="gap-2 md:gap-4 text-3xl">
           <Text>Identity.</Text>
           <Text>Data.</Text>
-          <Text class="text-white">Realtime.</Text>
+          <Text>Realtime.</Text>
         </Flex>
         <div class="text-center font-bold text-6xl">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF25B6] to-[#EA591E]">Beyond The Cloud</span>
@@ -13,8 +13,7 @@
       </Text>
       
       <Text size="lg" class="px-4 md:px-12 lg:px-36">
-        We create powerful tools and platforms designed to streamline your development workflow—so your team can focus
-        less on setup and more on shipping great products, faster.
+        Redefining modern web application development with seamless identity management, powerful data synchronization, and instant real-time updates—all in one platform.
       </Text>
 
       <Flex row items-center class="gap-4 mx-auto mb-8">
