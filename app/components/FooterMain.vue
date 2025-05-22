@@ -55,14 +55,6 @@
           Blog
         </DaisyLink>
       </nav>
-      <nav class="flex flex-col gap-4">
-        <FooterTitle class="normal-case">Subscribe to our newsletter</FooterTitle>
-        <Text>
-          Get the best Feathers content <br/> as it becomes available.
-        </Text>
-        <Input lg type="text" placeholder="Email address" />
-        <Button class="bg-base-content text-neutral">Subscribe</Button>
-      </nav>
     </Footer>
   </div>
 </template>

@@ -18,8 +18,9 @@
       </Text>
 
       <Flex row items-center class="gap-4 mx-auto mb-8">
-        <Button lg class="bg-primary-content text-neutral hover:bg-primary-content/80">Get Started</Button>
-        <Button lg outline>Documentation</Button>
+        <NuxtLink to="/auth" class="btn btn-xl bg-primary-content text-neutral hover:bg-primary-content/80">
+          Get Started 🚀
+        </NuxtLink>
       </Flex>
 
       <NuxtImg src="/img/planet.svg" class="w-[318px] lg:w-[599px] h-[218px] lg:h-[412px] absolute transition-all duration-500 ease-in-out -bottom-[calc(100%-8rem)] -right-10 lg:-bottom-32 lg:-right-108 planet-wobble" />
