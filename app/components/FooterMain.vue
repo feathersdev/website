@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-[#251938]">
-    <Footer class="sm:footer-horizontal text-neutral-content max-w-[87rem] mx-auto p-10">
-      <nav class="sm:hidden lg:block">
-        <Logo />
-      </nav>
+  <div class="bg-[#251938] pb-32">
+    <div class="flex items-center justify-center py-8">
+      <Logo />
+    </div>
+    <Footer class="sm:footer-horizontal text-neutral-content max-w-[87rem] mx-auto p-10 justify-evenly text-lg">
       <nav class="flex flex-col gap-4">
         <FooterTitle class="normal-case">Products</FooterTitle>
         <DaisyLink hover>
@@ -56,5 +56,12 @@
         </DaisyLink>
       </nav>
     </Footer>
+
+    <div class="bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 h-1 max-w-[87rem] mx-auto" />
+    <div class="flex items-center justify-center py-3">
+      <p class="text-center text-sm text-neutral-content/30">
+        Copyright © 2012 - {{ new Date().getFullYear() }} feathers.dev
+      </p>
+    </div>
   </div>
 </template>
