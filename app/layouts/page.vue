@@ -6,11 +6,7 @@
     <div class="relative z-0">
       <NuxtPage />
     </div>
-    <MoonSurface class="w-full">
-      <Flex col items-center class="my-16 md:my-10 lg:my-24 xl:my-32">
-        <NewsletterSubscribe class="w-full md:max-w-[600px]"/>
-      </Flex>
-    </MoonSurface>
+    <MoonSurface />
     <FooterMain />
   </main>
 </template>

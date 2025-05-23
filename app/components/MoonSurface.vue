@@ -8,7 +8,9 @@ const { archClasses = 'fill-base-200' } = defineProps<{
 <template>
   <div class="relative">
     <div class="md:absolute inset-0 p-8">
-      <slot />
+      <Flex col items-center class="my-16 md:my-10 lg:my-24 xl:my-32">
+        <NewsletterSubscribe class="w-full md:max-w-[600px]"/>
+      </Flex>
     </div>
   <svg viewBox="0 0 1512 1368" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_71_1250)">

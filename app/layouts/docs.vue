@@ -3,8 +3,8 @@ const dropdownId = useId()
 </script>
 
 <template>
-  <div class="bg-base-100">
-    <div class="relative mx-auto max-w-[1512px] bg-base-200">
+  <div class="bg-base-200">
+    <div class="relative mx-auto max-w-[1396px]">
       <TopNav class="mx-auto max-w-[1512px] border-b border-b-base-100/20" />
 
       <Drawer v-slot="{ toggleDrawer }" name="docs" class="lg:drawer-open">
@@ -52,6 +52,6 @@ const dropdownId = useId()
     </div>
   </div>
   <div class="mx-auto max-w-[1512px] bg-base-200 rounded-b-xl h-12" />
-  <MoonSurface arch-classes="fill-base-100" class="mt-24" />
+  <MoonSurface class="mt-24" />
   <FooterMain />
 </template>
