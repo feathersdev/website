@@ -3,6 +3,12 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
+@layer base {
+  html {
+    font-size: 18px;
+  }
+}
+
 @plugin "daisyui/theme" {
   name: "feathers";
   default: true;
@@ -42,6 +48,9 @@
 
   /* border size */
   --border: 1px;
+
+  /* Card */
+  --card-fs: 1rem;
 
   /* effects */
   --depth: 1;

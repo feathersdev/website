@@ -13,7 +13,7 @@
       </Text>
       
       <Text size="lg" class="px-4 md:px-12 lg:px-36">
-        Redefining modern web application development with seamless identity management, powerful data synchronization, and instant real-time updates—all in one platform.
+        Redefining modern web application development with seamless identity management, powerful data synchronization, and instant real-time updates—all in one place.
       </Text>
 
       <Flex row items-center class="gap-4 mx-auto mb-8">

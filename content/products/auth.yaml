@@ -1,7 +1,7 @@
 title: Feathers Auth
 shortName: Auth
 description: Secure and scalable user logins for any framework
-longDescription: Feathers Auth is a secure and scalable user authentication system for any framework. It provides a set of tools and libraries for building APIs, real-time applications, and microservices.
+longDescription: Feathers Auth is a secure and scalable user authentication system for any framework and web runtime, even on sites with no server. It ships with a powerful, offline-capable, data synchronization layer that lets you build web applications quickly.
 slug: auth
 icon: 'feathersdev:auth'
 logo: '/img/logo-auth-white.svg'
