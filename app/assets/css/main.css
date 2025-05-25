@@ -80,6 +80,9 @@
   */
 }
 
+html {
+  background-color: var(--color-base-200);
+}
 
 html, body, #__nuxt {
   font-family: Poppins, sans-serif;

@@ -10,8 +10,8 @@ const authProduct = products.value?.find((product) => product.slug === 'auth')
 const otherProducts = products.value?.filter((product) => product.slug !== 'auth')
 
 useSeoMeta({
-  title: 'Feathers.dev',
-  description: 'Build Faster. Launch Smarter',
+  title: 'feathers.dev',
+  description: 'Identity. Data. Realtime.',
 })
 </script>
 

@@ -27,17 +27,18 @@ watch(
               <NuxtLink
                 v-for="product in products" :key="product.title"
                 class="list-row hover:bg-base-300/10 items-center"
-                :to="`/${product.slug}`"
+                :to="product.link"
               >
                 <Flex row items-center class="w-12 flex-shrink-0">
-                  <Icon :name="product.icon" size="40" />
+                  <Icon v-if="product.icon" :name="product.icon" size="40" />
+                  <img v-else :src="product.meta.iconImage" class="size-9" />
                 </Flex>
                 <div>
                   <Text semibold lg>
                     {{ product.title }}
                   </Text>
                   <div class="text-sm leading-tight opacity-60">
-                    {{ product.description }}
+                    {{ product.meta.menuDescription }}
                   </div>
                 </div>
                 <Icon name="feather:chevron-right" size="24" />

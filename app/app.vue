@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Feathers',
+  title: 'feathers.dev',
   htmlAttrs: {
     lang: 'en',
     'data-theme': 'feathers',

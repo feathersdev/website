@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'page',
 })
 
-const { data: pinionProduct } = await useAsyncData(() => queryCollection('products').where('slug', '=', 'pinion').first())
+const { data: lofiProduct } = await useAsyncData(() => queryCollection('products').where('slug', '=', 'lofi').first())
 
 useSeoMeta({
   title: 'FeathersJS',
@@ -15,9 +15,9 @@ useSeoMeta({
   <div class="bg-[url('/img/top_background.svg')] bg-no-repeat bg-cover bg-center text-base-content max-w-screen overflow-x-hidden">
     <div class="relative mx-auto max-w-[78rem] lg:drawer-open pt-16 px-4">
       <HeroProduct
-        :product="pinionProduct!"
-        bird-classes="relative w-[160px] lg:w-[412px] lg:top-24 transition-all duration-500 ease-in-out floating"
-        planet-classes="absolute w-[318px] lg:w-[599px] transition-all duration-500 ease-in-out -bottom-[calc(100%-8rem)] right-10 lg:-top-6 lg:-right-90"
+        :product="lofiProduct!"
+        bird-classes="relative w-[160px] lg:w-[342px] mb-30 lg:top-34 transition-all duration-500 ease-in-out floating"
+        planet-classes="absolute w-[318px] lg:w-[599px] transition-all duration-500 ease-in-out -bottom-[calc(100%-8rem)] right-10 lg:top-0 lg:-right-68"
       />
     </div>
     <div class="h-64"></div>

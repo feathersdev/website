@@ -10,6 +10,12 @@ const productSchema = z.object({
   icon: z.string(),
   logo: z.string(),
   link: z.string(),
+  meta: z.object({
+    iconImage: z.optional(z.string()),
+    birdImage: z.string(),
+    planetImage: z.string(),
+    menuDescription: z.string()
+  })
 })
 
 export type Product = z.infer<typeof productSchema>
