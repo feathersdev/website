@@ -6,6 +6,6 @@ menuDescription: A flexible code generator and task runner
 slug: pinion
 icon: 'feathersdev:pinion'
 logo: '/img/logo-pinion-white.svg'
-link: '/pinion/quick-start'
+link: '/pinion'
 birdImage: '/img/bird-gray.svg'
 planetImage: '/img/planet-green.svg'

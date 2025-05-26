@@ -159,8 +159,8 @@ const formattedTokensPerMonth = computed(() => {
         </div>
       </div>
 
-      <transition>
-        <div v-if="price >= MAX_PRICE" class="!text-[var(--s)]">
+      <transition name="fade" appear>
+        <div v-show="price >= MAX_PRICE" class="!text-[var(--s)]">
           <a href="mailto:hello@feathers.dev">Contact Us</a>&nbsp;
           <span>for Volume Discounts and Self-hosted options</span>
         </div>
@@ -174,3 +174,12 @@ const formattedTokensPerMonth = computed(() => {
 
   <div />
 </template>
+
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+</style>
