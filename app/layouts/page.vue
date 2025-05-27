@@ -1,7 +1,7 @@
 <template>
   <main class="relative w-full min-h-full bg-base-200">
     <div class="absolute w-full z-50">
-      <TopNav class="max-w-[78rem] mx-auto" />
+      <TopNav class="max-w-[82rem] mx-auto" />
     </div>
     <div class="relative z-0">
       <NuxtPage />

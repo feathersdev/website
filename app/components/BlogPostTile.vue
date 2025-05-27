@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import type { BlogPost } from '../../content.config'
+import type { BlogPostsCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  post: BlogPost
+  post: BlogPostsCollectionItem
+  cardClasses?: string
 }>()
 </script>
 
 <template>
   <div>
-    <Card class="h-full">
+    <Card :class="cardClasses">
+      <figure class="aspect-video !rounded-box m-4">
+        <img :src="post.meta.imgSrc" :alt="post.title" class="object-cover h-full w-full object-center">
+      </figure>
       <CardBody class="gap-6">
-        <figure class="aspect-video rounded-box">
-          <img :src="post.meta.imgSrc" :alt="post.title" class="object-cover h-full w-full object-center">
-        </figure>
         <CardTitle>{{ post.title }}</CardTitle>
         <p>{{ post.description }}</p>
 

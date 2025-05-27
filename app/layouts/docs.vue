@@ -4,8 +4,8 @@ const dropdownId = useId()
 
 <template>
   <div class="bg-base-200">
-    <div class="relative mx-auto max-w-[78rem]">
-      <TopNav class="mx-auto max-w-[1512px] border-b border-b-base-100/20" />
+    <div class="relative mx-auto max-w-[82rem]">
+      <TopNav class="mx-auto max-w-[82rem] border-b border-b-base-100/20" />
 
       <Drawer v-slot="{ toggleDrawer }" name="docs" class="lg:drawer-open">
         <DrawerSide name="docs" class="z-40">
