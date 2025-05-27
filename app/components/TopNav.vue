@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: products } = await useAsyncData(() => queryCollection('products').all())
+const { data: products } = await useAsyncData(() => queryCollection('products').where('published', '=', true).all())
 
 const $route = useRoute()
 const isProductsDropdownOpen = ref(false)

@@ -4,7 +4,7 @@ definePageMeta({
 })
 
 const { data: posts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').all())
-const { data: products } = await useAsyncData(() => queryCollection('products').all())
+const { data: products } = await useAsyncData(() => queryCollection('products').where('published', '=', true).all())
 
 const authProduct = products.value?.find((product) => product.slug === 'auth')
 const otherProducts = products.value?.filter((product) => product.slug !== 'auth')

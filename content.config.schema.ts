@@ -3,6 +3,7 @@ import { z } from 'zod'
 // Products
 export const productSchema = z.object({
   title: z.string(),
+  published: z.boolean(),
   shortName: z.string(),
   description: z.string(),
   longDescription: z.string(),

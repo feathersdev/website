@@ -1,4 +1,5 @@
 title: Feathers Auth
+published: true
 shortName: Auth
 description: Seamless Identity and Data Sync
 longDescription: Feathers Auth is a secure and scalable user authentication system for any framework and web runtime, even on sites with no server. It ships with a powerful, offline-capable, data synchronization layer that lets you build web applications quickly.
