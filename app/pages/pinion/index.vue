@@ -4,6 +4,7 @@ definePageMeta({
 })
 
 const { data: pinionProduct } = await useAsyncData(() => queryCollection('products').where('slug', '=', 'pinion').first())
+const { data: pinionDocs } = await useAsyncData(() => queryCollection('pinionDocs').order('id', 'ASC').all())
 
 useSeoMeta({
   title: 'FeathersJS',
@@ -23,6 +24,12 @@ useSeoMeta({
     <div class="h-64"></div>
   </div>
   <div class="bg-base-200 min-h-screen max-w-[78rem] mx-auto -mt-64 rounded-4xl p-6 pt-12 lg:p-12">
+    <Titles title="Feathers Pinion Explained" class="pt-6 mb-6" />
+
+    <DocsTiles 
+      :pages="pinionDocs!"
+      class="mb-24"
+    />
 
     <Discord />
   </div>

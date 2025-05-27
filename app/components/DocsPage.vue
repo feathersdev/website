@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { AuthCollectionItem, FeathersCollectionItem, PinionCollectionItem } from '@nuxt/content';
+import type { AuthDocsCollectionItem, FeathersDocsCollectionItem, PinionDocsCollectionItem } from '@nuxt/content';
 
-defineProps<{ page: PinionCollectionItem | AuthCollectionItem | FeathersCollectionItem }>()
+defineProps<{ page: PinionDocsCollectionItem | AuthDocsCollectionItem | FeathersDocsCollectionItem }>()
 </script>
 
 <template>

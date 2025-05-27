@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Product } from '~~/content.config';
+import type { Product } from '~~/content.config.schema';
 
 defineProps<{
   superTitle?: string,

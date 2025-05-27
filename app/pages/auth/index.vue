@@ -1,9 +1,24 @@
 <script setup lang="ts">
+import type { AuthDocsCollectionItem } from '@nuxt/content'
+
 definePageMeta({
   layout: 'page',
 })
 
 const { data: authProduct } = await useAsyncData(() => queryCollection('products').where('slug', '=', 'auth').first())
+
+// Docs pages in order of the `visiblePageTitles` array
+const { data: authDocs } = await useAsyncData(() => queryCollection('authDocs').order('id', 'ASC').all())
+const visiblePageTitles = [
+  'Overview',
+  'Guides',
+  'Server',
+  'API',
+]
+const visiblePages = computed(() => 
+  visiblePageTitles.map(title => authDocs.value?.find(page => page.title === title))
+    .filter((page): page is AuthDocsCollectionItem => !!page)
+)
 
 useSeoMeta({
   title: 'feathers.dev',
@@ -88,6 +103,15 @@ useSeoMeta({
     </Titles>
 
     <Pricing />
+
+    <Titles
+      title="Feathers Auth Explained"
+      class="mt-36 mb-6"
+    />
+    <DocsTiles 
+      :pages="visiblePages!"
+      class="mb-24"
+    />
 
     <Discord />
   </div>
