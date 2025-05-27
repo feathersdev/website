@@ -1,0 +1,33 @@
+{
+  "title": "Pinion",
+  "items": [
+    {
+      "title": "Quick Start",
+      "path": "/pinion/docs/"
+    },
+    {
+      "title": "Why",
+      "path": "/pinion/docs/why/"
+    },
+    {
+      "title": "Generators",
+      "path": "/pinion/docs/generators/"
+    },
+    {
+      "title": "Templates",
+      "path": "/pinion/docs/templates/"
+    },
+    {
+      "title": "User Input",
+      "path": "/pinion/docs/user-input/"
+    },
+    {
+      "title": "Composability",
+      "path": "/pinion/docs/composability/"
+    },
+    {
+      "title": "API",
+      "path": "/pinion/docs/api/"
+    }
+  ]
+}

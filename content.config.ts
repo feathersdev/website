@@ -1,79 +1,42 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
-import { z } from 'zod'
-
-const productSchema = z.object({
-  title: z.string(),
-  shortName: z.string(),
-  description: z.string(),
-  longDescription: z.string(),
-  slug: z.string(),
-  icon: z.string(),
-  logo: z.string(),
-  link: z.string(),
-  meta: z.object({
-    iconImage: z.optional(z.string()),
-    birdImage: z.string(),
-    planetImage: z.string(),
-    menuDescription: z.string()
-  })
-})
-
-export type Product = z.infer<typeof productSchema>
-
-const blogPostSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  description: z.string(),
-  extension: z.string(),
-  date: z.string(),
-  meta: z.object({
-    tagline: z.string().optional(),
-    author: z.string(),
-    category: z.string(),
-    imgSrc: z.string(),
-    imgContainerClasses: z.string().optional(),
-    pinned: z.boolean().optional(),
-    tags: z.array(z.string()).optional()
-  }),
-  navigation: z.boolean().optional(),
-  path: z.string(),
-  seo: z.object({
-    title: z.string(),
-    description: z.string()
-  }),
-  stem: z.string(),
-  slug: z.string(),
-  body: z.string()
-})
-
-export type BlogPost = z.infer<typeof blogPostSchema>
-export type BlogPostMeta = z.infer<typeof blogPostSchema.shape.meta>
-export type BlogPostSEO = z.infer<typeof blogPostSchema.shape.seo>
+import { productSchema, blogPostSchema, menuSchema } from './content.config.schema'
 
 export default defineContentConfig({
   collections: {
+    // Products
     products: defineCollection({
       type: 'data',
       source: 'products/**/*.yaml',
       schema: productSchema,
     }),
 
-    // Docs
+    // Site Pages and Menus
     pages: defineCollection({
       type: 'page',
       source: 'pages/**/*.md',
     }),
-    pinion: defineCollection({
-      type: 'page',
-      source: 'pinion/**/*.md',
+    menus: defineCollection({
+      type: 'data',
+      source: 'menus/**/*.json',
+      schema: menuSchema
     }),
-    feathers: defineCollection({
+
+    // Docs
+    pinionDocs: defineCollection({
       type: 'page',
-      source: 'feathers/**/*.md',
+      source: 'pinion/docs/**/*.md',
     }),
-    auth: defineCollection({
+    feathersDocs: defineCollection({
       type: 'page',
-      source: 'auth/**/*.md',
+      source: 'feathers/docs/**/*.md',
+    }),
+    authDocs: defineCollection({
+      type: 'page',
+      source: 'auth/docs/**/*.md',
+    }),
+    lofiDocs: defineCollection({
+      type: 'page',
+      source: 'lofi/docs/**/*.md',
     }),
     
     // Blog

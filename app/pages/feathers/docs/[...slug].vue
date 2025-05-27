@@ -8,7 +8,7 @@ if (route.path.includes('.html')) {
 
 const { data: page } = await useAsyncData(
   () => pathWithoutHtml.value,
-  () => queryCollection('auth').path(route.path).first(),
+  () => queryCollection('feathersDocs').path(route.path).first(),
 )
 
 definePageMeta({

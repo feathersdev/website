@@ -9,11 +9,11 @@ const dropdownId = useId()
 
       <Drawer v-slot="{ toggleDrawer }" name="docs" class="lg:drawer-open">
         <DrawerSide name="docs" class="z-40">
-          <Sidebar @close="toggleDrawer()" />
+          <DocsSidebar @close="toggleDrawer()" />
         </DrawerSide>
 
         <DrawerContent name="docs">
-          <Flex class="sticky top-0 h-16 p-2 md:px-4 z-10 w-full items-center">
+          <Flex class="sticky top-0 h-16 p-2 md:px-4 z-10 w-full items-center lg:hidden">
             <div class="flex-grow">
               <Button square class="lg:hidden" @click="() => toggleDrawer()">
                 <span class="sr-only">Open sidebar</span>

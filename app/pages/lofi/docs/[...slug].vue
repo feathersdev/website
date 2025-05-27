@@ -8,7 +8,7 @@ if (route.path.includes('.html')) {
 
 const { data: page } = await useAsyncData(
   () => pathWithoutHtml.value,
-  () => queryCollection('pinion').path(route.path).first(),
+  () => queryCollection('lofiDocs').path(route.path).first(),
 )
 
 definePageMeta({

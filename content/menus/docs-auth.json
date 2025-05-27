@@ -1,0 +1,78 @@
+{
+  "title": "Auth",
+  "items": [
+    {
+      "title": "Quick Start",
+      "path": "/auth/docs/"
+    },
+    {
+      "title": "Guide",
+      "icon": "material-symbols:book-2-outline",
+      "iconClasses": "text-primary text-xl",
+      "children": [
+        {
+          "title": "Overview",
+          "path": "/auth/docs/guide"
+        },
+        {
+          "title": "React",
+          "path": "/auth/docs/guide/react"
+        },
+        {
+          "title": "Vue",
+          "path": "/auth/docs/guide/vue"
+        },
+        {
+          "title": "Svelte",
+          "path": "/auth/docs/guide/svelte"
+        },
+        {
+          "title": "TypeScript",
+          "path": "/auth/docs/guide/typescript"
+        }
+      ]
+    },
+    {
+      "title": "Server",
+      "icon": "lucide:server",
+      "iconClasses": "text-secondary text-lg",
+      "children": [
+        {
+          "title": "Overview",
+          "path": "/auth/docs/server"
+        },
+        {
+          "title": "Node.js",
+          "path": "/auth/docs/server/nodejs"
+        },
+        {
+          "title": "Deno",
+          "path": "/auth/docs/server/deno"
+        },
+        {
+          "title": "Bun",
+          "path": "/auth/docs/server/bun"
+        },
+        {
+          "title": "Cloudflare Workers",
+          "path": "/auth/docs/server/cloudflare"
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "icon": "material-symbols:menu-book-outline",
+      "iconClasses": "text-warning text-lg",
+      "children": [
+        {
+          "title": "API",
+          "path": "/auth/docs/api"
+        },
+        {
+          "title": "Pricing",
+          "path": "/auth/docs/pricing"
+        }
+      ]
+    }
+  ]
+}
