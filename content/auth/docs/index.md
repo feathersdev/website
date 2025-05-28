@@ -5,7 +5,7 @@ outline: deep
 
 # Feathers Auth
 
-Feathers Auth adds secure and scalable user authentication to any JavaScript and TypeScript web application. It works with any frontend framework and with NodeJS, Cloudflare Workers, Deno or Bun and even on websites with no server at all.
+Feathers Auth adds secure and scalable user authentication to any web application. It works with any frontend framework and with NodeJS, Cloudflare Workers, Deno or Bun and even on websites with no server at all.
 
 ## How it works
 
@@ -13,9 +13,9 @@ While Feathers Auth looks similar to traditional identity providers by letting u
 
 The only thing needed to verify a user identity is the public application identifier. It is self contained and requires no backend, secrets or additional server requests. It even works offline.
 
-## Quick start
+## Setting up
 
-The fastest way to get up and running with Cloud Auth is by using our CLI tool with one of these commands.
+Go to [app.feathers.dev](https://app.feathers.dev) and sign up for an account. Create an organization and an application. Then, on your new application page, click the link for the web framework or server platform you want to integrate.
 
 ### Example
 

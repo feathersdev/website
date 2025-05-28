@@ -19,8 +19,8 @@ const { data } = await useAsyncData(
 </script>
 
 <template>
-  <div class="relative menu w-80 bg-base-200 text-base-content h-full overflow-y-auto">
-    <div class="relative z-10 pt-16">
+  <div class="relative menu w-60 bg-base-200 text-base-content h-full overflow-y-auto">
+    <div class="relative z-10">
       <Flex justify-end class="absolute right-2 lg:hidden z-20 top-4">
         <Button square ghost @click="$emit('close')">
           <Icon name="feather:x" size="24" />

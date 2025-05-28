@@ -2,7 +2,7 @@
 
 Cloud Auth is fully compatible with [Cloudflare Workers](https://workers.cloudflare.com/) and can verify requests like this.
 
-```sh
+```bash
 npm create feathersdev@latest server --platform cloudflare --app-id "<your-app-id>"
 ```
 
