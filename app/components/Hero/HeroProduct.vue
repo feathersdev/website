@@ -22,7 +22,7 @@ defineProps<{
           {{ product.longDescription }}
         </Text>
 
-        <NuxtLink to="/auth" class="btn btn-xl bg-primary-content text-neutral hover:bg-primary-content/80">
+        <NuxtLink :to="`${product.link}/docs`" class="btn btn-xl bg-primary-content text-neutral hover:bg-primary-content/80">
           Get Started
         </NuxtLink>
       </Flex>
