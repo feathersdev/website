@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-// import { parseMarkdown } from '#imports'
-
 definePageMeta({
   layout: 'page',
 })
@@ -8,10 +6,12 @@ definePageMeta({
 const route = useRoute()
 const slug = computed<string>(() => route.params.slug as string)
 
-const { data: post } = await useAsyncData(
+const { data: posts } = await useAsyncData(
   slug,
-  () => queryCollection('blogPosts').where('slug', '=', slug.value).first()
+  () => queryCollection('pinionDocs').all()
 )
+
+const post = ref({})
 
 // const body = ref<any>(await parseMarkdown(post.value?.body || ''))
 // watch(post, async () => {
@@ -25,7 +25,7 @@ useSeoMeta({
   description: post.value?.description,
 })
 
-const { data: recentPosts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').limit(3).all())
+// const { data: recentPosts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').limit(3).all())
 </script>
 
 <template>
@@ -48,7 +48,9 @@ const { data: recentPosts } = await useAsyncData(() => queryCollection('blogPost
 
       <Titles :title="post?.title!" :sub-title="post?.meta?.tagline!"/>
 
-      <!-- <ContentRenderer v-if="body" :value="body" /> -->
+      <!-- <ContentRenderer v-if="post" :value="post" /> -->
+
+      <pre>{{ posts }}</pre>
     </div>
 
     <div class="px-4 md:pt-8 md:pb-7 md:px-5">
