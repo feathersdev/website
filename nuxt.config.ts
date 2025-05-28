@@ -34,6 +34,10 @@ export default defineNuxtConfig({
   ],
 
   content: {
+    database: {
+      type: 'd1',
+      bindingName: 'WEBSITE'
+    },
     build: {
       markdown: {
         highlight: {
@@ -43,6 +47,9 @@ export default defineNuxtConfig({
         },
       },
     },
+    renderer: {
+      anchorLinks: true,
+    }
   },
 
   runtimeConfig: {
