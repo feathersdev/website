@@ -21,6 +21,7 @@
     "@unhead/vue": "^2.0.10",
     "@vueuse/core": "^13.3.0",
     "@vueuse/integrations": "^13.3.0",
+    "better-sqlite3": "^11.10.0",
     "daisy-ui-kit": "5.0.0-pre.8",
     "nuxt": "^3.17.4",
     "vue": "^3.5.15",
