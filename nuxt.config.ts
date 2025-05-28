@@ -34,10 +34,6 @@ export default defineNuxtConfig({
   ],
 
   content: {
-    database: {
-      type: 'd1',
-      bindingName: 'WEBSITE'
-    },
     build: {
       markdown: {
         highlight: {
