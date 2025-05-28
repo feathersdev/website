@@ -74,6 +74,14 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    optimizeDeps: {
+      exclude: ['**/examples/**']
+    },
+    build: {
+      rollupOptions: {
+        external: ['**/examples/**']
+      }
+    }
   },
 
   eslint: {
