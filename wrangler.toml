@@ -1,0 +1,9 @@
+name = "feathers"
+compatibility_date = "2025-04-29"
+compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "website"
+database_id = "4d32a5a7-fdc0-49b6-8171-a9b37cdb2e3c"
