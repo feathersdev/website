@@ -1,0 +1,63 @@
+name: Deploy to Cloudflare Pages
+
+env:
+  NODE_VERSION: '22'
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+          cache: true
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache Nuxt build cache
+        uses: actions/cache@v4
+        with:
+          path: .nuxt/cache
+          key: ${{ runner.os }}-nuxt-cache-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-cache-
+
+      - name: Cache .output
+        uses: actions/cache@v4
+        with:
+          path: .output
+          key: ${{ runner.os }}-output-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-output-
+
+      - name: Build project
+        run: pnpm run build
+        env:
+          CI: true
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      - name: Install Wrangler CLI
+        run: pnpm add -g wrangler
+
+      - name: Publish to Cloudflare Pages
+        run: npx wrangler pages deploy dist --project-name=website --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
