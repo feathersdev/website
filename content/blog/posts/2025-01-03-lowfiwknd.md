@@ -1,6 +1,7 @@
 ---
 date: 2025-01-03
 title: 'Vancouver DWeb Local First Weekend 2025'
+slug: 2025-01-03-lowfiwknd
 tagline: 'On January 11th and 12th 2025 we will be co-hosting the first DWeb Local First weekend in Vancouver'
 author: David Luecke
 category: DWeb

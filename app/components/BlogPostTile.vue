@@ -18,10 +18,10 @@ defineProps<{
         <p>{{ post.description }}</p>
 
         <CardActions class="mt-4">
-          <Button primary ghost>
+          <NuxtLink :to="post.path" class="btn btn-primary btn-ghost">
             Read More 
             <Icon name="feather:chevron-right" size="24" />
-          </Button>
+          </NuxtLink>
         </CardActions>
       </CardBody>
     </Card>

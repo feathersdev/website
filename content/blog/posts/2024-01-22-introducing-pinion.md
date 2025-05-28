@@ -1,6 +1,7 @@
 ---
 date: 2024-01-22
 title: 'Pinion - A modern code generator toolkit'
+slug: 2024-01-22-introducing-pinion
 tagline: 'A flexible task runner and code generator for any language'
 author: David Luecke
 category: Open Source
