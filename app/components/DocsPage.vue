@@ -5,7 +5,7 @@ defineProps<{ page: PinionDocsCollectionItem | AuthDocsCollectionItem | Feathers
 </script>
 
 <template>
-  <div v-if="page" class="pt-6 px-3 lg:px-6  prose mx-auto max-w-3xl">
+  <div v-if="page" class="pt-6 px-3 lg:px-6 prose mx-auto max-w-full">
     <ContentRenderer v-if="page" :value="page" />
   </div>
 </template>

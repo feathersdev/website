@@ -19,15 +19,15 @@ const { data } = await useAsyncData(
 </script>
 
 <template>
-  <div class="relative pt-16 menu w-80 bg-base-200 text-base-content h-full">
-    <div class="relative z-10">
-      <Flex justify-end class="absolute right-2 lg:hidden">
+  <div class="relative menu w-80 bg-base-200 text-base-content h-full overflow-y-auto">
+    <div class="relative z-10 pt-16">
+      <Flex justify-end class="absolute right-2 lg:hidden z-20 top-4">
         <Button square ghost @click="$emit('close')">
           <Icon name="feather:x" size="24" />
         </Button>
       </Flex>
 
-      <Flex col class="pb-12 pl-2 overflow-y-auto">
+      <Flex col class="pb-12 pl-2">
         <template v-for="link in data.items" :key="link.path">
           <template v-if="link.children">
             <SidebarMenuSection :section="link" />

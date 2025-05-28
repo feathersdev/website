@@ -38,10 +38,10 @@ const dropdownId = useId()
           </Flex>
 
           <div class="grid grid-cols-4 pb-32">
-            <div class="flex flex-col col-span-4 md:col-span-3 order-2 md:order-1">
+            <div class="flex flex-col col-span-4 md:col-span-3 overflow-hidden">
               <slot />
             </div>
-            <div id="right-sidebar" class="col-span-4 md:col-span-1 md:pr-6 order-1 md:order-2">
+            <div id="right-sidebar" class="col-span-1 md:pr-6">
               <div class="hidden md:block md:sticky top-16">
                 <TableOfContents class="overflow-hidden" />
               </div>

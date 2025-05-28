@@ -22,7 +22,7 @@ watch(
             Products
             <Icon name="feather:chevron-down" class="text-xl ml-1" />
           </DropdownTarget>
-          <DropdownContent class="z-10 bg-base-content text-base-100 rounded-box mt-4 p-3 w-96">
+          <DropdownContent class="z-40 bg-base-content text-base-100 rounded-box mt-4 p-3 w-96">
             <List>
               <NuxtLink
                 v-for="product in products" :key="product.title"
@@ -46,10 +46,10 @@ watch(
             </List>
           </DropdownContent>
         </Dropdown>
-        <NuxtLink to="/blog">
+        <NuxtLink to="/blog" class="hidden sm:block">
           Blog
         </NuxtLink>
-        <NuxtLink to="/help">
+        <NuxtLink to="/help" class="hidden sm:block">
           Help
         </NuxtLink>
       </Flex>
