@@ -2,14 +2,14 @@
   "title": "Auth",
   "items": [
     {
-      "title": "Quick Start",
-      "path": "/auth/docs/"
-    },
-    {
       "title": "Guide",
       "icon": "material-symbols:book-2-outline",
       "iconClasses": "text-primary text-xl",
       "children": [
+        {
+          "title": "Setting up",
+          "path": "/auth/docs/"
+        },
         {
           "title": "Overview",
           "path": "/auth/docs/guide"
@@ -29,6 +29,17 @@
         {
           "title": "TypeScript",
           "path": "/auth/docs/guide/typescript"
+        }
+      ]
+    },
+    {
+      "title": "Data sync",
+      "icon": "material-symbols:cloud-sync-rounded",
+      "iconClasses": "text-neutral-content text-lg",
+      "children": [
+        {
+          "title": "Overview",
+          "path": "/auth/docs/data"
         }
       ]
     },
