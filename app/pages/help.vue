@@ -11,7 +11,7 @@ definePageMeta({
     </div>
     <div class="h-64"></div>
   </div>
-  <div class="bg-base-200 min-h-screen max-w-[82rem] mx-auto -mt-64 -mb-64 rounded-4xl p-6 pt-12 lg:p-12">
+  <div class="bg-base-200 min-h-screen max-w-[82rem] mx-auto -mt-64 rounded-4xl p-6 pt-12 lg:p-12">
     <Discord />
   </div>
 </template>
