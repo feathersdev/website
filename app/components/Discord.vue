@@ -1,5 +1,5 @@
 <template>
-  <Flex col items-center justify-center class="md:flex-row py-24 bg-base-300/25 rounded-4xl">
+  <Flex col items-center justify-center class="md:flex-row py-8 md:py-24 bg-base-300/25 rounded-4xl">
     <Flex col class="md:flex-row-reverse items-center gap-6">
       <Flex class="px-6 md:pl-24">
         <img src="/img/bird-comms.png" alt="Discord" />
