@@ -14,7 +14,7 @@ useSeoMeta({
 
 <template>
   <div class="bg-[url('/img/top_background.svg')] bg-no-repeat bg-cover bg-center text-base-content max-w-screen overflow-x-hidden">
-    <div class="relative mx-auto max-w-[82rem] lg:drawer-open pt-16 px-4">
+    <div class="relative mx-auto max-w-[82rem] lg:drawer-open md:pt-16 px-4">
       <HeroHome />
     </div>
     <div class="h-64"></div>
