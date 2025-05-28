@@ -44,7 +44,6 @@ export const blogPostSchema = z.object({
   }),
   stem: z.string(),
   slug: z.string(),
-  body: z.string()
 })
 export type BlogPost = z.infer<typeof blogPostSchema>
 export type BlogPostMeta = z.infer<typeof blogPostSchema.shape.meta>
