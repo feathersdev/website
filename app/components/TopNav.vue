@@ -56,7 +56,7 @@ watch(
     </NavbarCenter>
 
     <NavbarEnd>
-      <Button>Sign In</Button>
+      <NuxtLink class="btn" target="_blank" to="https://app.feathers.dev/">Sign In</NuxtLink>
     </NavbarEnd>
   </Navbar>
 </template>
