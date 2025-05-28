@@ -3,7 +3,7 @@
     <div class="absolute w-full z-50">
       <TopNav class="max-w-[82rem] mx-auto" />
     </div>
-    <div class="relative z-0">
+    <div class="relative pt-0">
       <NuxtPage />
     </div>
     <MoonSurface />

@@ -1,15 +1,11 @@
 ---
-sidebar: false
-
 title: Feathers Cloud
 titleTemplate: Terms Of Service
 ---
 
 # Terms of service
 
-TERMS OF SERVICE
-
-# FEATHERS CLOUD INC. WEBSITE TERMS OF USE
+FEATHERS CLOUD INC. WEBSITE TERMS OF USE
 
 **LAST UPDATED: JUNE 12, 2024**
 
