@@ -12,7 +12,11 @@ npm create feathersdev@latest app --framework vanilla --app-id "<your-app-id>"
 
 In any web application, create an `auth.ts` file that allows to make authenticated requests to the backend like this:
 
-<<< @/examples/frontend/auth.ts
+::CodePreview
+---
+path: frontend/auth.ts
+---
+::
 
 This file exports an `authFetch` function that can be used just like the normal [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and will redirect to the login page if the user needs to log in.
 

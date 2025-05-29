@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { codeToHtml } from 'shiki'
-import { computed, onMounted, ref, resolveComponent, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
   path: string
@@ -25,6 +25,7 @@ const language = computed(() => {
     'ts': 'typescript',
     'js': 'javascript',
     'vue': 'vue',
+    'svelte': 'svelte', // Add this line
     'html': 'html',
     'css': 'css',
     'json': 'json',
@@ -37,21 +38,30 @@ const language = computed(() => {
 
 async function loadCodeAndComponent() {
   try {
-    // Get all example files using a glob pattern that includes all possible example directories
-    const files = import.meta.glob('../../examples/**/*', { as: 'raw', eager: false })
+    // Look in the app/.cache/examples directory
+    const files = import.meta.glob([
+      '../.cache/examples/**/*.ts',
+      '../.cache/examples/**/*.tsx',
+      '../.cache/examples/**/*.js',
+      '../.cache/examples/**/*.jsx',
+      '../.cache/examples/**/*.vue',
+      '../.cache/examples/**/*.svelte',
+      '../.cache/examples/**/*.md'
+    ], { 
+      as: 'raw',
+      eager: false
+    })
 
-    console.log('files', files)
-    
-    // Normalize the path by removing @/ if present and any leading/trailing slashes
+    // Normalize the path by removing prefixes and cleaning up
     let normalizedPath = props.path
-      .replace(/^@\//, '')
-      .replace(/^\/+|\/+$/g, '')
+      .replace(/^@\/examples\//, '') // Remove @/examples/ prefix
+      .replace(/^\.\.\/\.\.\/\.\.\/\.\.\/examples\//, '') // Remove ../../../../examples/ prefix
+      .replace(/^examples\//, '') // Remove examples/ prefix if present
+      .replace(/^\/*|\/*$/g, '') // Remove leading/trailing slashes
     
-    console.log('Looking for file:', normalizedPath)
-    
-    // Try to find the file with the exact path first
+    // Try to find the file with the normalized path
     let fileKey = Object.keys(files).find(key => 
-      key.endsWith(`/${normalizedPath}`)
+      key.includes(`/${normalizedPath}`)
     )
     
     // If not found, try to find it by just the filename
@@ -60,15 +70,13 @@ async function loadCodeAndComponent() {
       fileKey = Object.keys(files).find(key => key.endsWith(`/${filename}`))
     }
     
-    console.log('Found file at:', fileKey)
-    
     if (!fileKey) {
-      throw new Error(`File not found: ${normalizedPath}. Available files: ${Object.keys(files).slice(0, 10).join(', ')}...`)
+      throw new Error(`File not found: ${normalizedPath}. Make sure the file exists in the examples directory and has been copied to the cache.`)
     }
 
     const loadRaw = files[fileKey]
     if (!loadRaw) {
-      throw new Error(`Failed to load file: ${fileKey}`)
+      throw new Error(`File not found: ${normalizedPath}. Make sure the file exists in the examples directory and has been copied to the cache.`)
     }
     code.value = await loadRaw()
     
@@ -115,7 +123,6 @@ watch(() => props.path, () => {
 
 <style>
 pre.shiki {
-  /* Diagonal stripes, subtle effect */
   background-color: var(--tw-prose-pre-bg) !important;
   color: var(--tw-prose-pre-code) !important;
 }

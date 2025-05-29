@@ -10,12 +10,20 @@ npm create feathersdev@latest server --platform cloudflare --app-id "<your-app-i
 
 An `authenticateRequest` function that validates an incoming web standard request can be implemented in `src/authenticate.ts` like this:
 
-<<< @/examples/server/cloudflare/src/authenticate.ts
+::CodePreview
+---
+path: server/cloudflare/src/authenticate.ts
+---
+::
 
 ## Worker
 
 It can then be used in a Cloudflare worker like this:
 
-<<< @/examples/server/cloudflare/src/index.ts
+::CodePreview
+---
+path: server/cloudflare/src/index.ts
+---
+::
 
 The full Cloudflare Worker example can be found [here](https://github.com/feathersdev/examples/tree/main/server/cloudflare).

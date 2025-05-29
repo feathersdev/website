@@ -43,6 +43,36 @@ export default defineNuxtConfig({
           theme: {
             default: 'andromeeda',
           },
+          preload: [
+            'json',
+            'js',
+            'ts',
+            'html',
+            'bash',
+            'tsx',
+            'svelte',
+            'vue'
+          ],
+          langs: [
+            'json',
+            'js',
+            'ts',
+            'html',
+            'css',
+            'bash',
+            'shell',
+            'python',
+            'go',
+            'rust',
+            'yaml',
+            'markdown',
+            'sql',
+            'dockerfile',
+            'nginx',
+            'tsx',
+            'svelte',
+            'vue'
+          ]
         },
       },
     },
@@ -74,14 +104,6 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
-    optimizeDeps: {
-      exclude: ['**/examples/**']
-    },
-    build: {
-      rollupOptions: {
-        external: ['**/examples/**']
-      }
-    }
   },
 
   eslint: {

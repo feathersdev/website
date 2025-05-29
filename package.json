@@ -4,12 +4,18 @@
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3"]
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   },
   "scripts": {
-    "build": "nuxt build",
+    "prepare": "node scripts/prepare-examples.mjs",
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
+    "predev": "npm run prepare",
+    "prebuild": "npm run prepare",
+    "pregenerate": "npm run prepare",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -36,6 +42,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "daisyui": "^5.0.38",
     "eslint": "^9.27.0",
+    "globby": "^14.1.0",
     "shiki": "^3.4.2",
     "tailwindcss": "^4.1.7",
     "zod": "^3.25.32"
