@@ -11,10 +11,6 @@
           "path": "/auth/docs/"
         },
         {
-          "title": "Overview",
-          "path": "/auth/docs/guide"
-        },
-        {
           "title": "React",
           "path": "/auth/docs/guide/react"
         },
@@ -38,7 +34,7 @@
       "iconClasses": "text-neutral-content text-lg",
       "children": [
         {
-          "title": "Overview",
+          "title": "Automerge",
           "path": "/auth/docs/data"
         }
       ]
@@ -48,10 +44,6 @@
       "icon": "lucide:server",
       "iconClasses": "text-secondary text-lg",
       "children": [
-        {
-          "title": "Overview",
-          "path": "/auth/docs/server"
-        },
         {
           "title": "Node.js",
           "path": "/auth/docs/server/nodejs"

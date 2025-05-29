@@ -22,9 +22,14 @@ defineProps<{
           {{ product.longDescription }}
         </Text>
 
-        <NuxtLink :to="`${product.link}/docs`" class="btn btn-xl bg-primary-content text-neutral hover:bg-primary-content/80">
-          Get Started
-        </NuxtLink>
+        <div class="flex gap-4">
+          <NuxtLink v-if="product.link" :to="product.link" class="btn btn-lg bg-primary-content text-neutral hover:bg-primary-content/80">
+            Get Started
+          </NuxtLink>
+          <NuxtLink v-if="product.meta.docLink" :to="product.meta.docLink" class="btn btn-lg bg-neutral">
+            Documentation
+          </NuxtLink>
+        </div>
       </Flex>
 
       <Flex class="relative flex-1">

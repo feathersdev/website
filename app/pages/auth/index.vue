@@ -74,9 +74,13 @@ useSeoMeta({
     </Titles>
     <Flex row items-center class="mb-12 gap-6">
       <img
-        src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/30aef796-4df0-421c-a129-053a06d6f400/publichd"
-        alt="Customize your Login page theme"
-        class="rounded-xl border-12 border-solid border-white/10 shadow-xl mt-8"
+        src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/6db9ed55-a009-428b-aa38-8bf7697bac00/public"
+        alt="A login page"
+      />
+      <img
+        src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/1a3bae7c-1a14-4f62-575f-de527fad4e00/public"
+        alt="The theme editor"
+        class="rounded-xl"
       />
     </Flex>
 
@@ -86,7 +90,7 @@ useSeoMeta({
       class="mt-36 mb-6"
     />
     <Flex row items-center class="mb-12 gap-6">
-      <img src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/71ddf09c-4fad-4f64-edb4-1de12e610c00/publichd"
+      <img src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/6e3999af-7414-4352-4453-5bd8f5d78100/public"
         alt="Feathers Dashboard" class="rounded-xl border-12 border-solid border-white/10 shadow-xl mt-8">
     </Flex>
 

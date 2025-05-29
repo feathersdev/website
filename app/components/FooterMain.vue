@@ -3,7 +3,7 @@ const { data: products } = await useAsyncData(() => queryCollection('products').
 </script>
 
 <template>
-  <div class="bg-[#251938] pb-32">
+  <div class="bg-[#251938]">
     <div class="flex items-center justify-center py-8">
       <Logo />
     </div>

@@ -3,7 +3,7 @@
 The [Bun JavaScript runtime](https://bun.sh/) can run a web standard HTTP server with Cloud Auth like this.
 
 ```sh
-npm create feathersdev@latest server --platform bun --app-id "<your-app-id>"
+npm create feathersdev@latest server -- --platform bun --app-id "<your-app-id>"
 ```
 
 ## Verifier

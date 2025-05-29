@@ -8,5 +8,6 @@ slug: auth
 icon: 'feathersdev:auth'
 logo: '/img/logo-auth-white.svg'
 link: '/auth'
+docLink: '/auth/docs'
 birdImage: '/img/bird-yellow.svg'
 planetImage: '/img/planet-yellow.svg'
