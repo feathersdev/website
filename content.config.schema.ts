@@ -14,6 +14,7 @@ export const productSchema = z.object({
   meta: z.object({
     iconImage: z.optional(z.string()),
     birdImage: z.string(),
+    docLink: z.optional(z.string()),
     planetImage: z.string(),
     menuDescription: z.string()
   })
