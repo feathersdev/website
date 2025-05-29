@@ -7,6 +7,8 @@ watch(
   () => $route.path,
   () => (isProductsDropdownOpen.value = false),
 )
+
+const dropdownId = useId()
 </script>
 
 <template>
@@ -17,7 +19,7 @@ watch(
 
     <NavbarCenter>
       <Flex row items-center class="gap-6 rounded-box bg-base-100/10 p-3 px-12">
-        <Dropdown hover v-model:open="isProductsDropdownOpen" placement="bottom">
+        <Dropdown hover v-model:open="isProductsDropdownOpen" placement="bottom" :random-id="dropdownId">
           <DropdownTarget class="flex justify-between cursor-pointer">
             Products
             <Icon name="feather:chevron-down" class="text-xl ml-1" />
