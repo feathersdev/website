@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="pb-32">
+  <div class="pb-32" v-if="product">
     <Flex col class="mx-auto max-w-6xl text-left lg:text-left gap-10 mt-32 relative px-4 lg:flex-row">
       <Flex col items-center class="lg:items-start gap-12 flex-1">
         <Text size="3xl">{{ product.description }}</Text>

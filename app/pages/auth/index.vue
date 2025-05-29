@@ -30,7 +30,8 @@ useSeoMeta({
   <div class="bg-[url('/img/top_background.svg')] bg-no-repeat bg-cover bg-center text-base-content max-w-screen overflow-x-hidden">
     <div class="relative mx-auto max-w-[82rem] lg:drawer-open pt-16 px-4">
       <HeroProduct 
-        :product="authProduct!"
+        v-if="authProduct"
+        :product="authProduct"
         bird-classes="relative w-[160px] lg:w-[412px] lg:top-24 transition-all duration-500 ease-in-out floating"
         planet-classes="absolute w-[318px] lg:w-[599px] transition-all duration-500 ease-in-out -bottom-[calc(100%-8rem)] right-10 lg:top-0 lg:-right-108"
       />
@@ -46,21 +47,17 @@ useSeoMeta({
 
     <Titles
       title="① Create Your Application"
-      description="Use one of the below commands with our CLI tool to get signed up and create your first application."
-      class="mb-24"
+      description="Sign in and use the dashboard to create your first application."
     />
-    <AuthStepOne class="my-12">
-      <template #cli>
-        <CliBlock>
-          <CliCommand>feathers example</CliCommand>
-        </CliBlock>
-      </template>
-      <template #cli2>
-        <CliBlock>
-          <CliCommand>feathers integrate</CliCommand>
-        </CliBlock>
-      </template>
-    </AuthStepOne>
+    <Flex row items-center justify-center class="mt-8 mb-24">
+      <NuxtLink 
+        to="https://app.feathers.dev/" 
+        target="_blank" 
+        class="btn btn-xl btn-primary"
+      >
+        Sign In
+      </NuxtLink>
+    </Flex>
 
     <Titles
       title="② Customize your theme"
@@ -68,19 +65,27 @@ useSeoMeta({
     >
       <template #description>
         <Text>
-          <a href="" class="text-primary">Sign in to the dashboard</a> and customize your theme to match your brand.
+          <NuxtLink 
+            to="https://app.feathers.dev/" 
+            target="_blank" 
+            class="link link-primary"
+          >
+            In the application dashboard,
+          </NuxtLink> 
+          customize your theme to match your brand.
         </Text>
       </template>
     </Titles>
-    <Flex row items-center class="mb-12 gap-6">
+    <Flex col items-center justify-center class="mb-12 gap-6 lg:flex-row">
       <img
         src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/6db9ed55-a009-428b-aa38-8bf7697bac00/public"
         alt="A login page"
+        class="w-110"
       />
       <img
         src="https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/1a3bae7c-1a14-4f62-575f-de527fad4e00/public"
         alt="The theme editor"
-        class="rounded-xl"
+        class="w-72"
       />
     </Flex>
 
