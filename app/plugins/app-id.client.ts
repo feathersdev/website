@@ -4,8 +4,6 @@ function getAppId() {
   const urlParams = new URLSearchParams(window.location.search)
   const urlAppId = urlParams.get('appId')
 
-  console.log('appId', urlAppId)
-
   if (urlAppId && urlAppId.startsWith('did:key:')) {
     localStorage.setItem('appId', urlAppId)
     localStorage.setItem('lastAccess', Date.now().toString())
