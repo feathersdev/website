@@ -40,13 +40,13 @@ async function loadCodeAndComponent() {
   try {
     // Look in the app/.cache/examples directory
     const files = import.meta.glob([
-      '../.cache/examples/**/*.ts',
-      '../.cache/examples/**/*.tsx',
-      '../.cache/examples/**/*.js',
-      '../.cache/examples/**/*.jsx',
-      '../.cache/examples/**/*.vue',
-      '../.cache/examples/**/*.svelte',
-      '../.cache/examples/**/*.md'
+      '../code/examples/**/*.ts',
+      '../code/examples/**/*.tsx',
+      '../code/examples/**/*.js',
+      '../code/examples/**/*.jsx',
+      '../code/examples/**/*.vue',
+      '../code/examples/**/*.svelte',
+      '../code/examples/**/*.md'
     ], { 
       as: 'raw',
       eager: false
