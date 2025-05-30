@@ -11,8 +11,8 @@ defineProps<{
 <template>
   <div class="pb-32" v-if="product">
     <Flex col class="mx-auto max-w-6xl text-left lg:text-left gap-10 mt-28 sm:mt-32 relative md:px-4 lg:flex-row">
-      <Flex col items-center class="lg:items-start gap-12 flex-1">
-        <Text size="2xl" class="text-balance md:text-3xl text-center md:text-left">{{ product.description }}</Text>
+      <Flex col items-center class="lg:items-start gap-8 lg:gap-12 flex-1">
+        <Text size="lg" class="text-balance lg:text-3xl text-center md:text-left">{{ product.description }}</Text>
 
         <div>
           <NuxtImg :src="product.logo" class="w-96"/>
@@ -35,7 +35,7 @@ defineProps<{
       <Flex class="relative flex-1">
         <NuxtImg :src="product.meta.birdImage" :class="birdClasses" />
         <NuxtImg :src="product.meta.planetImage" :class="planetClasses" />
-        <NuxtImg src="/img/rock-md.svg" class="absolute w-[144px] lg:-top-1 left-0 transition-all duration-500 ease-in-out floating-rock-1" />
+        <NuxtImg src="/img/rock-md.svg" class="absolute w-[144px] opacity-0 md:opacity-100 md:block top-50 left-72 lg:-top-1 lg:left-0 transition-all duration-500 ease-in-out floating-rock-1" />
         <NuxtImg src="/img/rock-lg.svg" class="absolute w-[386px] -bottom-24 -right-28 transition-all duration-500 ease-in-out floating-rock-2 hidden lg:block" />
       </Flex>
       
@@ -60,10 +60,10 @@ defineProps<{
     transform: translate(0, 0) rotate(0deg);
   }
   33% {
-    transform: translate(10px, -15px) rotate(14deg);
+    transform: translate(20px, -15px) rotate(24deg);
   }
-  66% {
-    transform: translate(-8px, 5px) rotate(-0.5deg);
+  76% {
+    transform: translate(-28px, 15px) rotate(54deg);
   }
 }
 
@@ -134,7 +134,7 @@ defineProps<{
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-22deg);
+    transform: rotate(-32deg);
   }
 }
 
