@@ -22,7 +22,7 @@ const dropdownId = useId()
       Sign In
     </NuxtLink>
 
-    <Navbar class="pt-0 sm:pt-3 px-0">
+    <Navbar class="pt-0 sm:pt-3">
       <NavbarStart >
         <Logo class="hidden sm:block" />
       </NavbarStart>
