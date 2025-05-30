@@ -2,7 +2,7 @@
   <div class="pb-12 lg:pb-0">
     <Flex col class="mx-auto max-w-5xl text-center gap-10 mt-36 relative px-4">
       <Text size="5xl" class="flex flex-col items-center justify-center gap-3">
-        <Flex row items-center justify-center class="gap-2 md:gap-4 text-3xl">
+        <Flex row items-center justify-center class="gap-2 md:gap-4 text-2xl sm:text-3xl">
           <Text>Identity.</Text>
           <Text>Data.</Text>
           <Text>Realtime.</Text>
@@ -22,11 +22,11 @@
         </NuxtLink>
       </Flex>
 
-      <NuxtImg src="/img/planet.svg" class="w-[400px] lg:w-[599px] absolute transition-all duration-500 ease-in-out -bottom-[calc(100%-10rem)] -right-52 md:-right-72 lg:-bottom-32 xl:-right-108 planet-wobble" />
       <NuxtImg src="/img/rock-md.svg" class="w-[190px] absolute lg:-top-1 -left-52 transition-all duration-500 ease-in-out floating-rock-1" />
       <NuxtImg src="/img/rock-lg.svg" class="hidden lg:block w-[386px] absolute -bottom-80 left-28 transition-all duration-500 ease-in-out floating-rock-2" />
       <NuxtImg src="/img/shuttle.svg" class="hidden lg:block w-[355px] absolute -bottom-72 right-20 transition-all duration-500 ease-in-out floating-shuttle" />
     </Flex>
+    <NuxtImg src="/img/planet.svg" class="w-[400px] lg:w-[599px] absolute transition-all duration-500 ease-in-out bottom-20 -right-52 sm:-right-32 lg:bottom-74 lg:-right-72 planet-wobble" />
     <NuxtImg src="/img/bird-red.svg" class="w-[260px] lg:w-[342px] relative lg:-top-26 transition-all duration-500 ease-in-out floating" />
   </div>
 </template>

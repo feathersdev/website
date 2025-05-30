@@ -18,12 +18,12 @@ defineProps<{
       :subTitle="subTitle"
       :description="description"
     />
-    <Flex class="mt-8 flex-wrap">
+    <Flex class="mt-8 flex-wrap px-2 lg:px-0">
       <ProductCard 
         v-for="product in products" 
         :key="product.slug"
         :product="product"
-        class="w-full md:w-1/2 lg:w-1/2"
+        class="w-full md:w-1/2 lg:w-1/2 p-2 lg:p-4"
       />
     </Flex>
   </div>

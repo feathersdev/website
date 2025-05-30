@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="p-4">
+  <div>
     <Card class="h-full items-start bg-primary-content text-base-100 p-2">
       <CardBody class="gap-6">
         <figure class="flex flex-col !items-start !justify-start invert">

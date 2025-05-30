@@ -7,7 +7,7 @@ const { data: products } = await useAsyncData(() => queryCollection('products').
     <div class="flex items-center justify-center py-8">
       <Logo />
     </div>
-    <Footer class="sm:footer-horizontal text-neutral-content max-w-[87rem] mx-auto p-10 justify-evenly text-lg">
+    <Footer class="sm:footer-horizontal text-neutral-content max-w-[87rem] mx-auto p-10 justify-evenly text-lg -ml-5.5 sm:ml-0">
       <nav class="flex flex-col gap-4">
         <FooterTitle class="normal-case">Products</FooterTitle>
         <NuxtLink v-for="product in products" :key="product.slug" class="link link-hover" :to="product.slug">
