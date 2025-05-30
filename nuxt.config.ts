@@ -41,7 +41,7 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: {
-            default: 'andromeeda',
+            default: 'github-dark',
           },
           preload: [
             'json',
