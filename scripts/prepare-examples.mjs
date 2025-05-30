@@ -7,7 +7,7 @@ import { globby } from 'globby'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PROJECT_ROOT = path.resolve(__dirname, '..')
 const EXAMPLES_SRC = path.join(PROJECT_ROOT, 'examples')
-const EXAMPLES_DEST = path.join(PROJECT_ROOT, 'app/.cache/examples')
+const EXAMPLES_DEST = path.join(PROJECT_ROOT, 'app/code/examples')
 
 // File extensions we want to include
 const ALLOWED_EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx', '.vue', '.svelte', '.md'])
@@ -17,7 +17,7 @@ async function findExampleFiles() {
   const files = await globby([
     '**/*.{ts,tsx,js,jsx,vue,svelte,md}',
     '!node_modules/**',
-    '!**/.cache/**',
+    '!**/code/**',
     '!.nuxt/**',
     '!dist/**'
   ], { 
