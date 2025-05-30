@@ -1,6 +1,6 @@
 # Automerge
 
-[Automerge](https://automerge.org) is a conflict-free replicated data type (CRDT) that is used to synchronize data between devices. Each feathers.dev application has an Automerge document that is can be used to store data that is synchronize in real-time between users. The `@feathersdev/automerge` package contains the Automerge integration for feathers.dev applications.
+[Automerge](https://automerge.org) is a conflict-free replicated data type (CRDT) that is used to synchronize data between devices. Each feathers.dev application has an Automerge document that can be used to store data that is synchronized in real-time between users. The `@feathersdev/automerge` package contains the Automerge integration for feathers.dev applications.
 
 ## Usage
 
