@@ -23,7 +23,7 @@
           <Text semibold xl>250</Text>
           <Text sm>monthly users</Text>
         </Flex>
-        <Flex col>
+        <Flex col class="hidden">
           <Text xl>1 GB</Text>
           <Text sm>data sync</Text>
         </Flex>
@@ -59,7 +59,7 @@
           <Text sm>monthly users</Text>
           <Text xs class="opacity-60">$0.01 per additional user</Text>
         </Flex>
-        <Flex col>
+        <Flex col class="hidden">
           <Text xl>10 GB</Text>
           <Text sm>data sync</Text>
           <Text xs class="opacity-60">$0.50 per additional GB</Text>
@@ -95,7 +95,7 @@
           <Text sm>monthly users</Text>
           <Text xs class="opacity-60">$0.005 per additional user</Text>
         </Flex>
-        <Flex col>
+        <Flex col class="hidden">
           <Text xl>100 GB</Text>
           <Text sm>data sync</Text>
           <Text xs class="opacity-60">$0.25 per additional GB</Text>
