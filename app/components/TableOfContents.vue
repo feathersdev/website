@@ -32,6 +32,12 @@ function scanHeadings() {
     pageTitle.value = h1.textContent || 'Table of Contents'
   }
 
+  // If no headings found, it might mean content hasn't loaded yet
+  // But also check if we have at least an h1 to ensure page content exists
+  if (headings.length === 0 && !h1) {
+    return
+  }
+
   // Process each heading
   headings.forEach((heading) => {
     // Skip the first h1 as it's the page title
@@ -75,14 +81,37 @@ function scanHeadings() {
 let observer: MutationObserver | null = null
 
 onMounted(() => {
-  // Initial scan
-  scanHeadings()
+  // Initial scan with a small delay to ensure content is rendered
+  setTimeout(() => {
+    scanHeadings()
+  }, 100)
 
   // Re-scan when route changes (for SPA navigation)
   watch(() => pageRoute.path, () => {
+    // Clear current TOC immediately when route changes
+    tocLinks.value = []
+    pageTitle.value = 'Table of Contents'
+    
+    // Use multiple strategies to ensure content is fully loaded
     nextTick(() => {
+      // First attempt after nextTick
       scanHeadings()
+      
+      // Second attempt with a delay to handle slow rendering
+      setTimeout(() => {
+        scanHeadings()
+      }, 200)
+      
+      // Third attempt with a longer delay as fallback
+      setTimeout(() => {
+        scanHeadings()
+      }, 500)
     })
+  })
+
+  // Also watch for hash changes to update active states
+  watch(() => pageRoute.hash, () => {
+    // No need to rescan, just update active states
   })
 
   // Watch for DOM mutations affecting headings
@@ -99,7 +128,10 @@ onMounted(() => {
       }
     }
     if (shouldRescan) {
-      scanHeadings()
+      // Add a small delay to allow DOM to stabilize
+      setTimeout(() => {
+        scanHeadings()
+      }, 50)
     }
   })
   observer.observe(document.body, {
