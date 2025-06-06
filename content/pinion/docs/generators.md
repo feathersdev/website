@@ -6,8 +6,6 @@ outline: deep
 
 A Pinion generator is any file that has a `generate` export which takes a context and returns a Promise with that context. In its most basic form a Pinion generator looks like this:
 
-::: code-group
-
 ```ts [generators/empty.tpl.ts]
 import { PinionContext } from '@featherscloud/pinion'
 
@@ -17,8 +15,6 @@ interface Context extends PinionContext {}
 // The `generate` export
 export const generate = (init: Context) => Promise.resolve(init)
 ```
-
-:::
 
 ```sh
 npx pinion generators/empty.tpl.ts
@@ -92,6 +88,8 @@ Let's review key lines to see how to further define `Context`:
 
 <!--@include: ./shared/context-extending-1.md-->
 
+:embed-markdown{collection="pinionShared" path="pinion/shared/context-extending-1"}
+
 The above example is a bit contrived because we can use TypeScript functions directly in templates. It's not necessary to define variables outside of templates like it is with other generator tools.
 
 The concept to be learned is that you can add properties to `context` in the promise and they will be available in the template. This would be more useful if we extracted the function into its own module and reused it in multiple generators.
@@ -101,8 +99,6 @@ What's really cool is that there's no special magic to learn. To make a reusable
 ## Tasks
 
 A task is any step within the `generate` function. Pinion tasks rely on functional programming through `Promise.then` chains. You can follow each step in the generator and they are still bundled as a testable and embedable plain function.
-
-::: code-group
 
 ```ts [generators/tasks.tpl.ts]
 import { PinionContext, prompt } from '@featherscloud/pinion'
@@ -150,8 +146,6 @@ export function generate(init: Context) {
     })
 }
 ```
-
-:::
 
 ```sh
 npx pinion generators/tasks.tpl.ts

@@ -31,7 +31,7 @@ A Pinion generator has two ingredients:
 
 The following file generates a basic `readme.md` from a TypeScript template string:
 
-<!--@include: ./shared/quick-start-1-basics.md-->
+:embed-markdown{collection="pinionShared" path="pinion/shared/quick-start-1-basics"}
 
 Once you ran the command, you can find your `readme.md` file in the current directory.
 
@@ -41,7 +41,7 @@ Pinion comes with a `prompt` utility that works with your typed context. Let's g
 
 You can ask questions from the command line with the [prompt](./generators.md#prompt) task:
 
-<!--@include: ./shared/quick-start-2-user-input.md-->
+:embed-markdown{collection="pinionShared" path="pinion/shared/quick-start-2-user-input"}
 
 Pinion uses [Inquirer](https://www.npmjs.com/package/inquirer) under the hood to ask questions. The `prompt` task takes an array or object of [Inquirer questions](https://www.npmjs.com/package/inquirer#question) and returns a function that takes a context and returns a promise with the updated context. We can then use this context in the next step to render our template with the answers.
 

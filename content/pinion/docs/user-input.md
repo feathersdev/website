@@ -10,8 +10,6 @@ This section shows how to handle user input through prompts and CLI arguments.
 
 As [we have seen before](./index.md#asking-questions), the [prompt](./api.md#prompt) task allows to ask questions from the command line using the [Inquirer](https://www.npmjs.com/package/inquirer) library. It gets passed a [list of Inquirer questions](https://www.npmjs.com/package/inquirer#question) that can also be put together based on the current context. This can be used to e.g. ask questions conditionally or skip them if the value is already passed (e.g. in an automated test):
 
-::: code-group
-
 ```ts [generators/readme.tpl.ts]
 import {
   PinionContext,
@@ -63,8 +61,6 @@ export function generate(init: Context) {
 }
 ```
 
-:::
-
 ```sh
 npx pinion generators/readme.tpl.ts
 ```
@@ -78,8 +74,6 @@ npx pinion generators/readme.ts --description hello something
 ```
 
 `context.argv` would be `['--description', 'hello', 'something']`. You can parse the list yourself and Pinion also ships with a [commander task](./api.md#commander) that uses the `commander` module to create command-line interfaces. The following example adds `--name` and `--description` command line arguments and skips prompting the user if it is passed.
-
-::: code-group
 
 ```ts [generators/readme.tpl.ts]
 import {
@@ -140,8 +134,6 @@ export function generate(init: Context) {
     .then(renderTemplate(readme, toFile('readme.md')))
 }
 ```
-
-:::
 
 ```sh
 npx pinion generators/readme.tpl.ts --name Test --description "The description from the command line"

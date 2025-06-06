@@ -16,8 +16,6 @@ There are three main helpers for working with file pointers:
 
 The following example asks for the path the `readme.md` file should be generated in and then puts the path together dynamically based on the context:
 
-::: code-group
-
 ```ts [generators/readme.tpl.ts]
 import {
   PinionContext,
@@ -74,8 +72,6 @@ export function generate(init: Context) {
 }
 ```
 
-:::
-
 ```sh
 npx pinion generators/readme.tpl.ts
 ```
@@ -90,8 +86,6 @@ The built-in file related tasks are:
 While you could use them in your own tasks, Pinion tries to avoid difficult-to-debug and untyped templating languages like EJS or Mustache. Instead, a standard Pinion template is simply a TypeScript template string. This means that templates are automatically typed and compiled with the rest of the generator. In our experience this avoids many runtime errors while also being nicer to develop. You get full auto-completion in any TypeScript code editor.
 
 It also allows composing templates by splitting them up into separate functions, and you have the entire JavaScript ecosystem (like [Lodash](https://lodash.com/)) available as helpers:
-
-::: code-group
 
 ```ts [generators/readme.tpl.ts]
 import { upperFirst } from 'lodash'
@@ -128,8 +122,6 @@ export function generate(init: Context) {
 }
 ```
 
-:::
-
 ```sh
 npx pinion generators/readme.tpl.ts
 ```
@@ -152,8 +144,6 @@ This is done by passing a template and an injection point to the `inject` task. 
 - `append()` inject at the end of the file
 
 The following example generates a TypeScript Express middleware and imports and registers it in `src/app.ts`:
-
-::: code-group
 
 ```ts [generators/middleware.tpl.ts]
 import {
@@ -220,8 +210,6 @@ const app = express()
 
 export { app }
 ```
-
-:::
 
 ```sh
 npx pinion generators/middleware.tpl.ts

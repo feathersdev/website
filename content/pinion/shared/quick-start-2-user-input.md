@@ -1,5 +1,3 @@
-::: code-group
-
 ```ts{7-8,25-34} [generators/readme.tpl.ts]
 import {
   PinionContext, renderTemplate, toFile, prompt
@@ -39,8 +37,6 @@ export const generate = (init: Context) => Promise.resolve(init)
   // Render the template
   .then(renderTemplate(readme, toFile('readme.md')))
 ```
-
-:::
 
 ```sh
 npx pinion generators/readme.tpl.ts

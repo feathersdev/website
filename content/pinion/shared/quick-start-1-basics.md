@@ -1,5 +1,3 @@
-::: code-group
-
 ```ts [generators/readme.tpl.ts]
 import { PinionContext, renderTemplate, toFile } from '@featherscloud/pinion'
 
@@ -21,8 +19,6 @@ export function generate(init: Context) {
   return Promise.resolve(init).then(renderTemplate(readme, toFile('readme.md')))
 }
 ```
-
-:::
 
 ```sh
 npx pinion generators/readme.tpl.ts

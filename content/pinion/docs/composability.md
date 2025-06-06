@@ -10,8 +10,6 @@ This chapter shows how to test generators, use them programmatically in CLI tool
 
 Another generator can be directly imported and run like any other tasks:
 
-::: code-group
-
 ```ts [generators/app.tpl.ts]
 import { PinionContext, exec } from '@featherscloud/pinion'
 import { generate as generateReadme } from './readme.tpl'
@@ -48,15 +46,11 @@ export function generate(init: Context) {
 }
 ```
 
-:::
-
 ```sh
 npx pinion generators/app.tpl.ts
 ```
 
 The [runGenerators](./api.md#rungenerators) tasks also allows to run all `.tpl.ts` generators in a folder in alphabetical order using the current context.
-
-::: code-group
 
 ```ts [generators/app.tpl.ts]
 // Get current file and directory in an ES module
@@ -108,8 +102,6 @@ export function generate(init: Context) {
 }
 ```
 
-:::
-
 ## Embedability
 
 Since a generator is just a function that can be called anywhere, Pinion generators can be composed, tested or used programatically e.g. in your own CLI tools just by importing the file, initialising a context and calling the generator:
@@ -136,8 +128,6 @@ npx pinion generators/app.tpl.ts
 ## Testing
 
 Similar to an embedded generator, automated tests can be written by initializing the context - usually with a temporary path - and passing all context variables necessary to [skip user prompts](./user-input.md#prompting):
-
-::: code-group
 
 ```ts [tests/readme.tpl.test.ts]
 import { describe, it } from 'node:test'
@@ -220,8 +210,6 @@ export function generate(init: Context) {
     .then(renderTemplate(readme, toFile('readme.md')))
 }
 ```
-
-:::
 
 ```sh
 node --import tsx --test test/readme.tpl.test.ts

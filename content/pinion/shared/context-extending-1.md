@@ -1,5 +1,3 @@
-::: code-group
-
 ```ts:line-numbers {5,9,14,22} [generators/readme.tpl.ts]
 import { PinionContext, toFile, renderTemplate } from '@featherscloud/pinion'
 
@@ -27,8 +25,6 @@ export const generate = (init: Context) => Promise.resolve(init)
   })
   .then(renderTemplate(readme, toFile('readme.md')))
 ```
-
-:::
 
 ```sh
 npx pinion generators/readme.tpl.ts
