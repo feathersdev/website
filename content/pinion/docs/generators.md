@@ -30,7 +30,7 @@ The key component of a Pinion generator is the `context` object that gets passed
 
 Let's look at the first quick start example and focus on the `Context`:
 
-<!--@include: ./shared/quick-start-1-basics.md-->
+:embed-markdown{collection="pinionShared" path="pinion/shared/quick-start-1-basics"}
 
 Even if your `Context` interface is empty, it still inherits the types from `PinionContext`. Let's see what's available in `PinionContext`.
 
@@ -85,8 +85,6 @@ Let's review key lines to see how to further define `Context`:
 - **Line 22:** the object returned in the promise adds a `year` property to the context. This makes `year` available to subsequent functions and to the template. The `renderTemplate` utility then calls the template function with the updated `context`.
 - **Line 9:** the `context` is received by the template function.
 - **Line 14:** the `year` property is used in the template.
-
-<!--@include: ./shared/context-extending-1.md-->
 
 :embed-markdown{collection="pinionShared" path="pinion/shared/context-extending-1"}
 
