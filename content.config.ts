@@ -26,6 +26,10 @@ export default defineContentConfig({
       type: 'page',
       source: 'pinion/docs/**/*.md',
     }),
+    pinionShared: defineCollection({
+      type: 'page',
+      source: 'pinion/shared/**/*.md',
+    }),
     feathersDocs: defineCollection({
       type: 'page',
       source: 'feathers/docs/**/*.md',
