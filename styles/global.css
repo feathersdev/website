@@ -1,14 +1,111 @@
 @layer base, starlight, theme, components, utilities;
 
-@import '@astrojs/starlight-tailwind';
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/utilities.css' layer(utilities);
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Dark mode colors - Feathers theme ported from DaisyUI */
+:root {
+  /* Accent colors derived from primary: oklch(48% 39% 348) */
+  --sl-color-accent-low: oklch(20% 20% 348);
+  --sl-color-accent: oklch(48% 39% 348);
+  --sl-color-text-accent: oklch(48% 39% 348);
+  --sl-color-accent-high: oklch(75% 30% 348);
+
+  /* Base colors from DaisyUI theme */
+  --sl-color-white: oklch(93.3% 0.01 260); /* base-content */
+  --sl-color-gray-1: oklch(80% 0.05 270); /* lighter gray */
+  --sl-color-gray-2: oklch(65% 0.1 280); /* light gray */
+  --sl-color-gray-3: oklch(50% 25% 285); /* medium gray */
+  --sl-color-gray-4: oklch(35% 44% 287); /* base-300 */
+  --sl-color-gray-5: oklch(25% 32% 295); /* between base-300 and base-200 */
+  --sl-color-gray-6: oklch(15% 19% 307); /* base-200 */
+  --sl-color-black: oklch(3.6% 0.01 270); /* base-100 */
+}
+
+/* Light mode colors - inverted for light theme */
+:root[data-theme="light"] {
+  /* Accent colors adjusted for light mode */
+  --sl-color-accent-low: oklch(85% 20% 348);
+  --sl-color-accent: oklch(50% 39% 348);
+  --sl-color-text-accent: oklch(48% 39% 348);
+  --sl-color-accent-high: oklch(25% 30% 348);
+
+  /* Inverted base colors */
+  --sl-color-white: oklch(3.6% 0.01 270); /* base-100 inverted */
+  --sl-color-gray-1: oklch(15% 19% 307); /* base-200 inverted */
+  --sl-color-gray-2: oklch(25% 32% 295);
+  --sl-color-gray-3: oklch(35% 44% 287); /* base-300 inverted */
+  --sl-color-gray-4: oklch(50% 25% 285);
+  --sl-color-gray-5: oklch(65% 0.1 280);
+  --sl-color-gray-6: oklch(80% 0.05 270);
+  --sl-color-gray-7: oklch(90% 0.02 265);
+  --sl-color-black: oklch(93.3% 0.01 260); /* base-content inverted */
+}
 
 @theme {
-	/*
-	Configure your Tailwind theme that will be used by Starlight.
-	https://starlight.astro.build/guides/css-and-tailwind/#styling-starlight-with-tailwind
-	*/
+  /* Tailwind v4 theme configuration */
+
+  /* Font Family */
+  --font-family-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom DaisyUI-compatible colors for Tailwind classes */
+  --color-base-100: oklch(3.6% 0.01 270);
+  --color-base-200: oklch(15% 19% 307);
+  --color-base-300: oklch(35% 44% 287);
+  --color-base-content: oklch(93.3% 0.01 260);
+
+  --color-primary: oklch(48% 39% 348);
+  --color-primary-content: oklch(100% 0 0);
+  --color-secondary: oklch(60% 44% 272);
+  --color-secondary-content: oklch(0% 0 0);
+  --color-accent: oklch(34.1% 0.13 297.4);
+  --color-accent-content: oklch(100% 0 0);
+  --color-neutral: oklch(20.1% 0.05 260.7);
+  --color-neutral-content: oklch(100% 0 0);
+
+  --color-info: oklch(56.8% 0.14 255.1);
+  --color-success: oklch(77.1% 0.13 149.9);
+  --color-warning: oklch(89.5% 0.17 97.7);
+  --color-error: oklch(64.1% 0.21 29.3);
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1rem;
+  --radius-4xl: 2rem;
+}
+
+@layer base {
+  @media (min-width: 640px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  html {
+    background-color: var(--sl-color-black);
+    font-family: var(--font-family-sans);
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Remove text decoration from heading links in prose */
+  .prose h1 a,
+  .prose h2 a,
+  .prose h3 a,
+  .prose h4 a,
+  .prose h5 a,
+  .prose h6 a {
+    text-decoration: none !important;
+  }
 }
 
 /*

@@ -1,5 +1,6 @@
 ---
-outline: deep
+title: Pinion API
+description: The Pinion API
 ---
 
 # API
