@@ -23,3 +23,6 @@ logs
 .env.*
 !.env.example
 app/code/examples
+
+# generated types
+.astro/

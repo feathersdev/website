@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:content.nuxt.com)",
+      "WebSearch",
+      "Bash(git log --oneline --all -S \"compatibilityVersion\" -- nuxt.config.ts)",
+      "Bash(pnpm list)",
+      "WebFetch(domain:nuxt.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
