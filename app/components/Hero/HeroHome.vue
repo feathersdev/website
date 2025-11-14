@@ -16,7 +16,7 @@
 
       <Text size="lg" class="px-4 md:px-12 lg:px-36">
         Modern web application development with secure user logins, local-first data synchronization and real-time
-        updates—all in one place.
+        updates. All in one place.
       </Text>
 
       <Flex row items-center class="gap-4 mx-auto mb-8">
