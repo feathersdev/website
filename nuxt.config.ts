@@ -94,10 +94,6 @@ export default defineNuxtConfig({
     port: 3004,
   },
 
-  // enable nuxt 4 compatibility:
-  future: {
-    compatibilityVersion: 4,
-  },
   compatibilityDate: '2024-11-01',
 
   vite: {
