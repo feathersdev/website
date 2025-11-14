@@ -14,13 +14,13 @@ const dropdownId = useId()
 
         <DrawerContent name="docs">
           <Flex class="sticky top-0 h-16 p-2 md:px-4 z-10 w-full items-center lg:hidden">
-            <div class="flex-grow">
+            <div class="flex-grow flex items-center gap-2">
               <Button square class="lg:hidden" @click="() => toggleDrawer()">
                 <span class="sr-only">Open sidebar</span>
                 <Icon name="heroicons-outline:menu-alt-2" aria-hidden="true" class="w-5 h-5" />
               </Button>
 
-            <!-- <Search /> -->
+              <DocsSearch class="flex-grow" />
             </div>
 
             <div class="flex items-center ml-2 md:ml-6">

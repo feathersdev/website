@@ -28,6 +28,10 @@ const { data } = await useAsyncData(
       </Flex>
 
       <Flex col class="pb-12 pl-2">
+        <div class="px-2 pb-4 pt-2">
+          <DocsSearch />
+        </div>
+
         <template v-for="link in data.items" :key="link.path">
           <template v-if="link.children">
             <SidebarMenuSection :section="link" />
