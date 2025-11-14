@@ -8,12 +8,15 @@
           <Text>Realtime.</Text>
         </Flex>
         <div class="text-center font-bold text-6xl">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF25B6] to-[#EA591E]">Beyond The Cloud</span>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF25B6] to-[#EA591E]"
+            >Beyond The Cloud</span
+          >
         </div>
       </Text>
-      
+
       <Text size="lg" class="px-4 md:px-12 lg:px-36">
-        Redefining modern web application development with seamless identity management, powerful data synchronization, and instant real-time updates—all in one place.
+        Modern web application development with secure user logins, local-first data synchronization and real-time
+        updates—all in one place.
       </Text>
 
       <Flex row items-center class="gap-4 mx-auto mb-8">
@@ -22,18 +25,34 @@
         </NuxtLink>
       </Flex>
 
-      <NuxtImg src="/img/rock-md.svg" class="w-[190px] absolute lg:-top-1 -left-52 transition-all duration-500 ease-in-out floating-rock-1" />
-      <NuxtImg src="/img/rock-lg.svg" class="hidden lg:block w-[386px] absolute -bottom-80 left-28 transition-all duration-500 ease-in-out floating-rock-2" />
-      <NuxtImg src="/img/shuttle.svg" class="hidden lg:block w-[355px] absolute -bottom-72 right-20 transition-all duration-500 ease-in-out floating-shuttle" />
+      <NuxtImg
+        src="/img/rock-md.svg"
+        class="w-[190px] absolute lg:-top-1 -left-52 transition-all duration-500 ease-in-out floating-rock-1"
+      />
+      <NuxtImg
+        src="/img/rock-lg.svg"
+        class="hidden lg:block w-[386px] absolute -bottom-80 left-28 transition-all duration-500 ease-in-out floating-rock-2"
+      />
+      <NuxtImg
+        src="/img/shuttle.svg"
+        class="hidden lg:block w-[355px] absolute -bottom-72 right-20 transition-all duration-500 ease-in-out floating-shuttle"
+      />
     </Flex>
-    <NuxtImg src="/img/planet.svg" class="w-[400px] lg:w-[599px] absolute transition-all duration-500 ease-in-out bottom-20 -right-52 sm:-right-32 lg:bottom-74 lg:-right-72 planet-wobble" />
-    <NuxtImg src="/img/bird-red.svg" class="w-[260px] lg:w-[342px] relative lg:-top-26 transition-all duration-500 ease-in-out floating" />
+    <NuxtImg
+      src="/img/planet.svg"
+      class="w-[400px] lg:w-[599px] absolute transition-all duration-500 ease-in-out bottom-20 -right-52 sm:-right-32 lg:bottom-74 lg:-right-72 planet-wobble"
+    />
+    <NuxtImg
+      src="/img/bird-red.svg"
+      class="w-[260px] lg:w-[342px] relative lg:-top-26 transition-all duration-500 ease-in-out floating"
+    />
   </div>
 </template>
 
 <style scoped>
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -42,7 +61,8 @@
 }
 
 @keyframes float-rock-1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   33% {
@@ -54,7 +74,8 @@
 }
 
 @keyframes float-rock-2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   30% {
@@ -83,29 +104,18 @@
 }
 
 @keyframes float-shuttle {
-  0%, 100% {
-    transform: 
-      translate(0, 0) 
-      rotate(-1deg) 
-      scale(1);
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-1deg) scale(1);
   }
   25% {
-    transform: 
-      translate(-5px, -3px) 
-      rotate(0.5deg) 
-      scale(1.005);
+    transform: translate(-5px, -3px) rotate(0.5deg) scale(1.005);
   }
   50% {
-    transform: 
-      translate(3px, 2px) 
-      rotate(-0.5deg) 
-      scale(0.995);
+    transform: translate(3px, 2px) rotate(-0.5deg) scale(0.995);
   }
   75% {
-    transform: 
-      translate(-2px, 4px) 
-      rotate(0.3deg) 
-      scale(1.002);
+    transform: translate(-2px, 4px) rotate(0.3deg) scale(1.002);
   }
 }
 
@@ -116,7 +126,8 @@
 }
 
 @keyframes planet-wobble {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   50% {

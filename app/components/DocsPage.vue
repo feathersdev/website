@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AuthDocsCollectionItem, FeathersDocsCollectionItem, PinionDocsCollectionItem } from '@nuxt/content';
+import type { AuthDocsCollectionItem, FeathersDocsCollectionItem, PinionDocsCollectionItem } from '@nuxt/content'
 
 defineProps<{ page: PinionDocsCollectionItem | AuthDocsCollectionItem | FeathersDocsCollectionItem }>()
 </script>

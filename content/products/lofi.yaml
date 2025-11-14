@@ -1,5 +1,6 @@
 title: Feathers Lo-Fi
 published: false
+highlight: false
 shortName: Lo-Fi
 description: Build High-Fidelity Apps with Lo-Fi.
 longDescription: Feathers Lo-Fi is a suite of products for building full-featured, Local-First web applications. Our first Lo-Fi product, Feathers Automerge, enables realtime, Local-First collaboration without the hassle and seamlessly integrates with Feathers Auth.
