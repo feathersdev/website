@@ -7,7 +7,6 @@ author: David Luecke
 category: DWeb
 imgSrc: https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/0b83d606-e110-4fd8-f0c6-88266dfc1600/public
 imgContainerClasses: 'h-64 sm:h-96 md:h-120'
-pinned: true
 tags:
   - dweb
 ---

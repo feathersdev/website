@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from "zod";
 
 // Products
 export const productSchema = z.object({
@@ -16,10 +16,10 @@ export const productSchema = z.object({
     birdImage: z.string(),
     docLink: z.optional(z.string()),
     planetImage: z.string(),
-    menuDescription: z.string()
-  })
-})
-export type Product = z.infer<typeof productSchema>
+    menuDescription: z.string(),
+  }),
+});
+export type Product = z.infer<typeof productSchema>;
 
 // Blog
 export const blogPostSchema = z.object({
@@ -34,21 +34,20 @@ export const blogPostSchema = z.object({
     category: z.string(),
     imgSrc: z.string(),
     imgContainerClasses: z.string().optional(),
-    pinned: z.boolean().optional(),
-    tags: z.array(z.string()).optional()
+    tags: z.array(z.string()).optional(),
   }),
   navigation: z.boolean().optional(),
   path: z.string(),
   seo: z.object({
     title: z.string(),
-    description: z.string()
+    description: z.string(),
   }),
   stem: z.string(),
   slug: z.string(),
-})
-export type BlogPost = z.infer<typeof blogPostSchema>
-export type BlogPostMeta = z.infer<typeof blogPostSchema.shape.meta>
-export type BlogPostSEO = z.infer<typeof blogPostSchema.shape.seo>
+});
+export type BlogPost = z.infer<typeof blogPostSchema>;
+export type BlogPostMeta = z.infer<typeof blogPostSchema.shape.meta>;
+export type BlogPostSEO = z.infer<typeof blogPostSchema.shape.seo>;
 
 // Menus
 export type MenuItem = {
@@ -63,23 +62,25 @@ export type MenuItem = {
   };
   children?: MenuItem[];
 };
-export const menuItemSchema: z.ZodType<MenuItem> = z.lazy(() => z.object({
-  title: z.string(),
-  path: z.string(),
-  stem: z.string(),
-  icon: z.string().optional(),
-  iconClasses: z.string().optional(),
-  noDivider: z.boolean().optional(),
-  meta: z.object({
-    new: z.boolean().optional()
+export const menuItemSchema: z.ZodType<MenuItem> = z.lazy(() =>
+  z.object({
+    title: z.string(),
+    path: z.string(),
+    stem: z.string(),
+    icon: z.string().optional(),
+    iconClasses: z.string().optional(),
+    noDivider: z.boolean().optional(),
+    meta: z.object({
+      new: z.boolean().optional(),
+    }),
+    children: z.array(menuItemSchema).optional(),
   }),
-  children: z.array(menuItemSchema).optional()
-}));
+);
 
 export const menuSchema = z.object({
   title: z.string(),
   icon: z.string().optional(),
   iconClasses: z.string().optional(),
-  items: z.array(menuItemSchema)
-})
-export type Menu = z.infer<typeof menuSchema>
+  items: z.array(menuItemSchema),
+});
+export type Menu = z.infer<typeof menuSchema>;
