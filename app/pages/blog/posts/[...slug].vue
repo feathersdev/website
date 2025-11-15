@@ -33,9 +33,14 @@ useSeoMeta({
   description: post.value?.description,
 })
 
-const { data: recentPosts } = await useAsyncData(() =>
-  queryCollection('blogPosts').order('date', 'DESC').limit(3).all(),
+const { data: allRecentPosts } = await useAsyncData(() =>
+  queryCollection('blogPosts').order('date', 'DESC').limit(4).all(),
 )
+
+// Filter out the current post and limit to 3
+const recentPosts = computed(() => {
+  return allRecentPosts.value?.filter((p) => p.slug !== slug.value).slice(0, 3) || []
+})
 </script>
 
 <template>

@@ -8,22 +8,22 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <Card :class="cardClasses">
-      <figure class="aspect-video !rounded-box md:m-4">
+  <NuxtLink :to="post.path" class="block h-full">
+    <Card :class="['h-[700px] hover:shadow-xl transition-shadow cursor-pointer', cardClasses]">
+      <figure class="h-52 !rounded-box md:m-4 overflow-hidden">
         <img :src="post.meta.imgSrc" :alt="post.title" class="object-cover h-full w-full object-center" />
       </figure>
-      <CardBody class="gap-6">
+      <CardBody class="gap-6 flex flex-col flex-1">
         <CardTitle>{{ post.title }}</CardTitle>
-        <p>{{ post.description }}</p>
+        <p class="line-clamp-3">{{ post.description }}</p>
 
-        <CardActions class="mt-4">
-          <NuxtLink :to="post.path" class="btn btn-primary btn-ghost">
+        <CardActions class="mt-auto">
+          <span class="btn btn-primary btn-ghost">
             Read More
             <Icon name="feather:chevron-right" size="24" />
-          </NuxtLink>
+          </span>
         </CardActions>
       </CardBody>
     </Card>
-  </div>
+  </NuxtLink>
 </template>

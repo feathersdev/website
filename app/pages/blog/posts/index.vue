@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: 'page'
+  layout: 'page',
 })
 
 const { data: posts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').all())
@@ -13,11 +13,7 @@ const otherPosts = computed(() => posts.value?.slice(1))
     class="bg-[url('/img/top_background.svg')] bg-no-repeat bg-cover bg-center text-base-content max-w-screen overflow-x-hidden"
   >
     <div class="relative mx-auto max-w-[82rem] lg:drawer-open pt-16 px-4">
-      <Titles
-        title="Latest News"
-        sub-title="Stay up to date with the latest Feathers news and updates"
-        class="py-24"
-      />
+      <Titles title="Latest News" sub-title="Stay up to date with the latest Feathers news and updates" class="py-24" />
     </div>
     <div class="h-64"></div>
   </div>
