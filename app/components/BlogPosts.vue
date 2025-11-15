@@ -7,12 +7,11 @@ defineProps<{
 </script>
 
 <template>
-  <Flex class="mt-4 flex-wrap">
-    <BlogPostTile 
-      v-for="post in posts" 
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <BlogPostTile
+      v-for="post in posts"
       :key="post.id"
       :post="post"
-      class="w-full md:w-1/2 lg:w-1/3"
     />
-  </Flex>
+  </div>
 </template>
