@@ -48,7 +48,7 @@ const recentPosts = computed(() => {
     class="bg-[url('/img/top_background.svg')] bg-no-repeat bg-cover bg-center text-base-content max-w-screen overflow-x-hidden"
   >
     <div class="relative mx-auto max-w-[82rem] lg:drawer-open pt-16">
-      <NuxtLink to="/blog" class="btn mt-2">
+      <NuxtLink to="/blog" class="btn btn-ghost my-10">
         <Icon name="feather:chevron-left" size="24" />
         Back to Blog
       </NuxtLink>
