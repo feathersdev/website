@@ -1,7 +1,7 @@
 ---
-date: 2025-11-16
+date: 2025-12-01
 title: 'A first look at local-first Feathers'
-slug: 2025-11-16-lofi-feathers
+slug: 2025-12-01-lofi-feathers
 tagline: 'Collaborative offline-capable real-time apps without a backend'
 author: David Luecke
 category: Feathers
