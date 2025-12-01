@@ -30,5 +30,5 @@ const refinedSrc = computed(() => {
 </script>
 
 <template>
-  <img :src="refinedSrc" :alt="alt" :width="width" :height="height">
+  <img :src="refinedSrc" :alt="alt" :width="width" :height="height" />
 </template>

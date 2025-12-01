@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'page',
 })
 
-const { data: posts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').all())
+const { data: posts } = await useAsyncData(() => queryCollection('blogPosts').order('date', 'DESC').limit(3).all())
 const { data: products } = await useAsyncData(() => queryCollection('products').where('published', '=', true).all())
 
 useSeoMeta({
