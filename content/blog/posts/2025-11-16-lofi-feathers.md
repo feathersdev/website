@@ -194,13 +194,7 @@ export default defineConfig({
 })
 ```
 
-Now we can start the development server with
-
-```bash
-npm run dev
-```
-
-And visit the page at [localhost:4321](http://localhost:4321). You can copy the URL into another browser to see messages being sent in real-time. The page will also continue to work offline.
+With the development server runnning, visit the page at [localhost:5173](http://localhost:5173/). You can copy the URL into another browser to see messages being sent in real-time. The page will also continue to work offline.
 
 The Automerge service is just one of the pieces of the project. A full example with offline views and server sync can be found in the [offline-sync](https://github.com/feathersdev/offline-sync) repository.
 
@@ -215,7 +209,7 @@ It was Halloween season and I opened up with the last video message of a nuclear
 
 We are really interested in the local-first software approach because it makes developing small apps and adding simple features or offline functionality to existing applications much easier than in current "full stack" development.
 
-However, most current authentication solutions rely on a central server and are not particularly local-first or offline friendly. Throughout this year we have also been working on refining and improving our authentication solution that makes local-first a priority and can also be quickly embedded in a traditional application with a web component. We are looking for beta testers for early in 2026. Subscribe to our newsletter below to stay in the loop!
+However, most current authentication solutions rely on a central server and are not particularly local-first or offline friendly. Throughout this year we have also been working on refining and improving our authentication solution that makes local-first a priority and can also be quickly embedded in a traditional application. We are looking for beta testers for early in 2026. Subscribe to our newsletter below to stay in the loop!
 
 ---
 
