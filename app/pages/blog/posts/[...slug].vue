@@ -28,9 +28,21 @@ watch(
   { immediate: false },
 )
 
+const siteUrl = 'https://feathers.dev'
+const pageUrl = computed(() => `${siteUrl}/blog/posts/${slug.value}`)
+
 useSeoMeta({
   title: post.value?.title,
-  description: post.value?.description,
+  description: post.value?.meta?.tagline || post.value?.description,
+  ogTitle: post.value?.title,
+  ogDescription: post.value?.meta?.tagline || post.value?.description,
+  ogImage: post.value?.meta?.imgSrc,
+  ogUrl: pageUrl.value,
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+  twitterTitle: post.value?.title,
+  twitterDescription: post.value?.meta?.tagline || post.value?.description,
+  twitterImage: post.value?.meta?.imgSrc,
 })
 
 const { data: allRecentPosts } = await useAsyncData(() =>
