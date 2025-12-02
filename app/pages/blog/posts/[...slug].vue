@@ -28,9 +28,21 @@ watch(
   { immediate: false },
 )
 
+const siteUrl = 'https://feathers.dev'
+const pageUrl = computed(() => `${siteUrl}/blog/posts/${slug.value}`)
+
 useSeoMeta({
   title: post.value?.title,
-  description: post.value?.description,
+  description: post.value?.meta?.tagline || post.value?.description,
+  ogTitle: post.value?.title,
+  ogDescription: post.value?.meta?.tagline || post.value?.description,
+  ogImage: post.value?.meta?.imgSrc,
+  ogUrl: pageUrl.value,
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+  twitterTitle: post.value?.title,
+  twitterDescription: post.value?.meta?.tagline || post.value?.description,
+  twitterImage: post.value?.meta?.imgSrc,
 })
 
 const { data: allRecentPosts } = await useAsyncData(() =>
@@ -60,7 +72,11 @@ const recentPosts = computed(() => {
   <div class="bg-base-200 min-h-screen max-w-[82rem] mx-auto -mt-64 rounded-4xl p-6 pt-12 lg:p-12">
     <div v-if="post" class="prose mx-auto mb-24">
       <figure class="aspect-video">
-        <img :src="post?.meta?.imgSrc" :alt="post?.title!" class="object-cover h-full w-full object-center" />
+        <img
+          :src="post?.meta?.imgSrc"
+          :alt="post?.title!"
+          class="object-cover h-full w-full object-center rounded-lg"
+        />
       </figure>
 
       <Titles :title="post?.title!" :sub-title="post?.meta?.tagline!" />

@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <NuxtLink :to="post.path" class="block h-full">
-    <Card :class="['h-full hover:shadow-xl transition-shadow cursor-pointer', cardClasses]">
+    <Card :class="['h-full cursor-pointer', cardClasses]">
       <figure class="h-52 !rounded-box md:m-4 overflow-hidden">
         <img :src="post.meta.imgSrc" :alt="post.title" class="object-cover h-full w-full object-center" />
       </figure>
