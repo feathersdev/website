@@ -5,8 +5,8 @@ slug: 2025-12-01-lofi-feathers
 tagline: 'Collaborative offline-capable real-time apps without a backend'
 author: David Luecke
 category: Feathers
-imgSrc: https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/bdb1ad17-8dca-4d58-ce82-2609d9de3000/public
-imgContainerClasses: 'h-64 sm:h-96 md:h-120'
+imgSrc: https://imagedelivery.net/9JPgw8SmnowT-UlbCrbUxw/09205bf6-a96e-4538-4d2c-75b9746de800/public
+imgContainerClasses: 'h-96'
 tags:
   - feathers
   - local-first
