@@ -30,8 +30,5 @@ const refinedSrc = computed(() => {
 </script>
 
 <template>
-  <div class="prose-img text-center mb-4">
-    <img :src="refinedSrc" :alt="alt" :width="width" :height="height" class="mb-1 rounded-md" />
-    <small v-if="alt">{{ alt }}</small>
-  </div>
+  <img :src="refinedSrc" :alt="alt" :width="width" :height="height" class="mb-1 rounded-md" />
 </template>

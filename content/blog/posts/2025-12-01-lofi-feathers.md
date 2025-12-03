@@ -194,7 +194,7 @@ export default defineConfig({
 })
 ```
 
-With the development server runnning, visit the page at [localhost:5173](http://localhost:5173/). You can copy the URL into another browser to see messages being sent in real-time. The page will also continue to work offline.
+With the development server running, visit the page at [localhost:5173](http://localhost:5173/). You can copy the URL into another browser to see messages being sent in real-time. The page will also continue to work offline.
 
 The Automerge service is just one of the pieces of the project. A full example with offline views and server sync can be found in the [offline-sync](https://github.com/feathersdev/offline-sync) repository.
 
